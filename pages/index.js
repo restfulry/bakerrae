@@ -1,6 +1,7 @@
 import { server } from "../config";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useContext } from "react";
+
 import BakeryDropList from "../components/BakeryDropList";
 
 export default function Home({ data }) {
