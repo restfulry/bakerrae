@@ -1,13 +1,40 @@
 import { server } from "../config";
 import { useRouter } from "next/router";
-import { useState, useContext } from "react";
+import { useState, useEffect } from "react";
 
 import BakeryDropList from "../components/BakeryDropList";
 
 export default function Home({ data }) {
   const [orderDetails, setOrderDetails] = useState({});
+  const [cart, setCart] = useState([]);
 
   const router = useRouter();
+
+  const handleAddToCart = (product) => {
+    const itemInCartIdx = cart.findIndex((item) => {
+      console.log("itemInCartIdx", item.product.id);
+      item.product.id === product.id;
+    });
+
+    let cartMap;
+
+    if (itemInCartIdx !== -1) {
+      console.log("in cart");
+      cartMap = cart.map((cartItem, i) => {
+        i === itemInCartIdx ? { ...cartItem, qty: cartItem.qty + 1 } : cartItem;
+      });
+    } else {
+      console.log("NOT in cart");
+      cartMap = [...cart, { product, qty: 1 }];
+    }
+
+    setCart([...cartMap]);
+  };
+
+  useEffect(() => {
+    console.log("CART", cart);
+    // cartTotal();
+  }, [cart]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +51,11 @@ export default function Home({ data }) {
 
   return (
     <div>
-      <BakeryDropList data={data} />
+      <BakeryDropList
+        data={data}
+        cart={cart}
+        handleAddToCart={handleAddToCart}
+      />
       <form onSubmit={handleSubmit}>
         <button type="submit">Checkout</button>
       </form>

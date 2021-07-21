@@ -2,9 +2,7 @@ import articleStyles from "../styles/Article.module.css";
 import { useContext } from "react";
 import CartProvider from "../context/CartContext";
 
-const BakeryDropItem = ({ nextDrop }) => {
-  const [orderQty, addToCart, cartTotal] = useContext(CartProvider);
-
+const BakeryDropItem = ({ nextDrop, cart, handleAddToCart }) => {
   const products = nextDrop.products;
 
   return (
@@ -17,18 +15,18 @@ const BakeryDropItem = ({ nextDrop }) => {
           <div key={product.id}>
             <h3>{product.name}</h3>
             <h4>{product.price}</h4>
-            You clicked the button {orderQty} times.
+            You clicked the button times.
             <input
               type="submit"
               value="add"
               onClick={() => {
-                addToCart(product);
+                handleAddToCart(product);
               }}
             />
           </div>
         );
       })}
-      <h3>{cartTotal({ products })}</h3>
+      <h3></h3>
     </div>
   );
 };

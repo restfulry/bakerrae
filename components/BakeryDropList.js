@@ -1,7 +1,7 @@
 import BakeryDropItem from "./BakeryDropItem";
 import articleStyles from "../styles/Article.module.css";
 
-const BakeryDropList = ({ data }) => {
+const BakeryDropList = ({ data, cart, handleAddToCart }) => {
   var today = new Date();
 
   const upcomingDrops = data.filter((drop) => new Date(drop.dropDate) > today);
@@ -22,7 +22,11 @@ const BakeryDropList = ({ data }) => {
 
   return (
     <div>
-      <BakeryDropItem nextDrop={nextDrop} />
+      <BakeryDropItem
+        nextDrop={nextDrop}
+        cart={cart}
+        handleAddToCart={handleAddToCart}
+      />
     </div>
   );
 };
