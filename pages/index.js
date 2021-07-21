@@ -12,23 +12,25 @@ export default function Home({ data }) {
 
   const handleAddToCart = (product) => {
     const itemInCartIdx = cart.findIndex((item) => {
-      console.log("itemInCartIdx", item.product.id);
-      item.product.id === product.id;
+      // console.log("itemInCartIdx", item.product.id);
+      return item.product.id === product.id;
     });
 
     let cartMap;
 
     if (itemInCartIdx !== -1) {
-      console.log("in cart");
       cartMap = cart.map((cartItem, i) => {
-        i === itemInCartIdx ? { ...cartItem, qty: cartItem.qty + 1 } : cartItem;
+        return i === itemInCartIdx
+          ? { ...cartItem, qty: cartItem.qty + 1 }
+          : cartItem;
       });
+      console.log("in cart", cartMap);
     } else {
-      console.log("NOT in cart");
       cartMap = [...cart, { product, qty: 1 }];
+      console.log("NOT in cart");
     }
 
-    setCart([...cartMap]);
+    return setCart([...cartMap]);
   };
 
   useEffect(() => {
