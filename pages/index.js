@@ -12,7 +12,6 @@ export default function Home({ data }) {
 
   const handleAddToCart = (product) => {
     const itemInCartIdx = cart.findIndex((item) => {
-      // console.log("itemInCartIdx", item.product.id);
       return item.product.id === product.id;
     });
 
@@ -21,13 +20,11 @@ export default function Home({ data }) {
     if (itemInCartIdx !== -1) {
       cartMap = cart.map((cartItem, i) => {
         return i === itemInCartIdx
-          ? { ...cartItem, qty: cartItem.qty + 1 }
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
           : cartItem;
       });
-      console.log("in cart", cartMap);
     } else {
-      cartMap = [...cart, { product, qty: 1 }];
-      console.log("NOT in cart");
+      cartMap = [...cart, { product, quantity: 1 }];
     }
 
     return setCart([...cartMap]);
@@ -42,9 +39,11 @@ export default function Home({ data }) {
     e.preventDefault();
     console.log("going to checkout");
 
+    const data = JSON.stringify(cart);
     const res = await fetch(`${server}/orders/checkout`, {
       method: "POST",
-      body: JSON.stringify(orderDetails),
+      headers: { "Content-Type": "application/json" },
+      body: data,
     });
 
     const url = await res.text();
