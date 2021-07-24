@@ -9,10 +9,21 @@ export default function Home({ data }) {
 
   const [cart, setCart] = useState([]);
 
+  const itemInCart = (product) => {
+    let itemInCart = cart.find((item) => item.product.id === product.id);
+    return itemInCart;
+  };
+
   const cartQty = (product) => {
-    return cart.find((cartItem) => cartItem.product.id === product.id)
-      ? cart.find((cartItem) => cartItem.product.id === product.id).quantity
-      : 0;
+    return itemInCart(product) ? itemInCart(product).quantity : 0;
+  };
+
+  const removeItemFromCart = (cartItem, i) => {
+    let cartMap = cart.filter(
+      (item) => item.product.id !== cartItem.product.id
+    );
+
+    return cartMap;
   };
 
   const handleAddToCart = (product) => {
@@ -35,9 +46,40 @@ export default function Home({ data }) {
     return setCart([...cartMap]);
   };
 
+  const handleRemoveFromCart = (product) => {
+    let cartMap;
+
+    if (itemInCart(product)) {
+      cartMap = cart.map((cartItem, i) => {
+        if (cartItem.product.id === itemInCart(product).product.id) {
+          if (cartItem.quantity <= 1) {
+            return {};
+          } else {
+            return {
+              ...cartItem,
+              quantity: cartItem.quantity - 1,
+            };
+          }
+        } else {
+          return cartItem;
+        }
+
+        // return cartItem.product.id === itemInCart(product).product.id
+        //   ? {
+        //       ...cartItem,
+        //       quantity: cartItem.quantity - 1,
+        //     }
+        //   : cartItem;
+      });
+    } else {
+      cartMap = [...cart];
+    }
+
+    return setCart([...cartMap]);
+  };
+
   useEffect(() => {
     console.log("CART", cart);
-    // cartTotal();
   }, [cart]);
 
   const handleSubmit = async (e) => {
@@ -62,6 +104,7 @@ export default function Home({ data }) {
         cart={cart}
         cartQty={cartQty}
         handleAddToCart={handleAddToCart}
+        handleRemoveFromCart={handleRemoveFromCart}
       />
       <form onSubmit={handleSubmit}>
         <button type="submit">Checkout</button>

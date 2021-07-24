@@ -2,7 +2,13 @@ import articleStyles from "../styles/Article.module.css";
 import { useContext } from "react";
 import CartProvider from "../context/CartContext";
 
-const BakeryDropItem = ({ nextDrop, cart, cartQty, handleAddToCart }) => {
+const BakeryDropItem = ({
+  nextDrop,
+  cart,
+  cartQty,
+  handleAddToCart,
+  handleRemoveFromCart,
+}) => {
   const products = nextDrop.products;
 
   return (
@@ -13,17 +19,23 @@ const BakeryDropItem = ({ nextDrop, cart, cartQty, handleAddToCart }) => {
         return (
           <div key={product.id}>
             <h3>{product.name}</h3>
-            <h4>{product.price}</h4>
+            <h4>${product.price}</h4>
             <p>
               {cartQty(product)}
               {""} in cart
             </p>
             <input
               type="submit"
-              value="add"
+              value="-"
+              onClick={() => {
+                handleRemoveFromCart(product);
+              }}
+            />
+            <input
+              type="submit"
+              value="+"
               onClick={() => {
                 handleAddToCart(product);
-                // cartQty(product);
               }}
             />
           </div>
