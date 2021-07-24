@@ -2,7 +2,7 @@ import articleStyles from "../styles/Article.module.css";
 import { useContext } from "react";
 import CartProvider from "../context/CartContext";
 
-const BakeryDropItem = ({ nextDrop, cart, handleAddToCart }) => {
+const BakeryDropItem = ({ nextDrop, cart, cartQty, handleAddToCart }) => {
   const products = nextDrop.products;
 
   return (
@@ -10,17 +10,20 @@ const BakeryDropItem = ({ nextDrop, cart, handleAddToCart }) => {
       <h1>OUR NEXT DROP</h1>
       <h1>{nextDrop.dropDate}</h1>
       {products.map((product) => {
-        // console.log(product.name);
         return (
           <div key={product.id}>
             <h3>{product.name}</h3>
             <h4>{product.price}</h4>
-            You clicked the button times.
+            <p>
+              {cartQty(product)}
+              {""} in cart
+            </p>
             <input
               type="submit"
               value="add"
               onClick={() => {
                 handleAddToCart(product);
+                // cartQty(product);
               }}
             />
           </div>

@@ -5,10 +5,15 @@ import { useState, useEffect } from "react";
 import BakeryDropList from "../components/BakeryDropList";
 
 export default function Home({ data }) {
-  const [orderDetails, setOrderDetails] = useState({});
+  const router = useRouter();
+
   const [cart, setCart] = useState([]);
 
-  const router = useRouter();
+  const cartQty = (product) => {
+    return cart.find((cartItem) => cartItem.product.id === product.id)
+      ? cart.find((cartItem) => cartItem.product.id === product.id).quantity
+      : 0;
+  };
 
   const handleAddToCart = (product) => {
     const itemInCartIdx = cart.findIndex((item) => {
@@ -55,6 +60,7 @@ export default function Home({ data }) {
       <BakeryDropList
         data={data}
         cart={cart}
+        cartQty={cartQty}
         handleAddToCart={handleAddToCart}
       />
       <form onSubmit={handleSubmit}>
