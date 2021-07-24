@@ -18,14 +18,6 @@ export default function Home({ data }) {
     return itemInCart(product) ? itemInCart(product).quantity : 0;
   };
 
-  const removeItemFromCart = (cartItem, i) => {
-    let cartMap = cart.filter(
-      (item) => item.product.id !== cartItem.product.id
-    );
-
-    return cartMap;
-  };
-
   const handleAddToCart = (product) => {
     let cartMap;
 
@@ -69,8 +61,6 @@ export default function Home({ data }) {
 
     const cleanCartMap = cartMap.filter((item) => item.quantity !== 0);
 
-    console.log("cartMap", JSON.stringify(cartMap, null, 4));
-    console.log("cleanCartMap", JSON.stringify(cleanCartMap, null, 4));
     return setCart([...cleanCartMap]);
   };
 
