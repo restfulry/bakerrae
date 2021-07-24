@@ -27,15 +27,11 @@ export default function Home({ data }) {
   };
 
   const handleAddToCart = (product) => {
-    const itemInCartIdx = cart.findIndex((item) => {
-      return item.product.id === product.id;
-    });
-
     let cartMap;
 
-    if (itemInCartIdx !== -1) {
+    if (itemInCart(product)) {
       cartMap = cart.map((cartItem, i) => {
-        return i === itemInCartIdx
+        return cartItem.product.id === itemInCart(product).product.id
           ? { ...cartItem, quantity: cartItem.quantity + 1 }
           : cartItem;
       });
@@ -53,7 +49,10 @@ export default function Home({ data }) {
       cartMap = cart.map((cartItem, i) => {
         if (cartItem.product.id === itemInCart(product).product.id) {
           if (cartItem.quantity <= 1) {
-            return {};
+            return {
+              ...cartItem,
+              quantity: 0,
+            };
           } else {
             return {
               ...cartItem,
@@ -63,13 +62,6 @@ export default function Home({ data }) {
         } else {
           return cartItem;
         }
-
-        // return cartItem.product.id === itemInCart(product).product.id
-        //   ? {
-        //       ...cartItem,
-        //       quantity: cartItem.quantity - 1,
-        //     }
-        //   : cartItem;
       });
     } else {
       cartMap = [...cart];
