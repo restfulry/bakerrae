@@ -67,7 +67,11 @@ export default function Home({ data }) {
       cartMap = [...cart];
     }
 
-    return setCart([...cartMap]);
+    const cleanCartMap = cartMap.filter((item) => item.quantity !== 0);
+
+    console.log("cartMap", JSON.stringify(cartMap, null, 4));
+    console.log("cleanCartMap", JSON.stringify(cleanCartMap, null, 4));
+    return setCart([...cleanCartMap]);
   };
 
   useEffect(() => {
