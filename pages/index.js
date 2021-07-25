@@ -3,11 +3,13 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 import BakeryDropList from "../components/BakeryDropList";
+import Shipping from "../components/Shipping";
 
 export default function Home({ data }) {
   const router = useRouter();
 
   const [cart, setCart] = useState([]);
+  const [shipping, setShipping] = useState("pickup");
   const [disabled, setDisabled] = useState(true);
 
   const itemInCart = (product) => {
@@ -73,16 +75,18 @@ export default function Home({ data }) {
     return setCart([...cleanCartMap]);
   };
 
-  useEffect(() => {
-    console.log("CART", cart);
-    checkReadyToCheckout();
-  }, [cart]);
+  const handleShipping = () => {
+    console.log("shipping", shipping);
+    return shipping === "shipping"
+      ? setShipping("pickup")
+      : setShipping("shipping");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("going to checkout");
 
-    const data = JSON.stringify(cart);
+    const data = JSON.stringify({ cart, shipping: shipping });
     const res = await fetch(`${server}/orders/checkout`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -93,6 +97,11 @@ export default function Home({ data }) {
     router.push(url);
   };
 
+  useEffect(() => {
+    console.log("CART: ", JSON.stringify(cart, null, 4));
+    checkReadyToCheckout();
+  }, [cart]);
+
   return (
     <div>
       <BakeryDropList
@@ -102,6 +111,7 @@ export default function Home({ data }) {
         handleAddToCart={handleAddToCart}
         handleRemoveFromCart={handleRemoveFromCart}
       />
+      <Shipping shipping={shipping} handleShipping={handleShipping} />
       <form onSubmit={handleSubmit}>
         <button type="submit" disabled={disabled}>
           Checkout
