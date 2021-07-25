@@ -8,6 +8,7 @@ export default function Home({ data }) {
   const router = useRouter();
 
   const [cart, setCart] = useState([]);
+  const [disabled, setDisabled] = useState(true);
 
   const itemInCart = (product) => {
     let itemInCart = cart.find((item) => item.product.id === product.id);
@@ -16,6 +17,14 @@ export default function Home({ data }) {
 
   const cartQty = (product) => {
     return itemInCart(product) ? itemInCart(product).quantity : 0;
+  };
+
+  const checkReadyToCheckout = () => {
+    if (cart.length > 0) {
+      return setDisabled(false);
+    } else {
+      return setDisabled(true);
+    }
   };
 
   const handleAddToCart = (product) => {
@@ -66,6 +75,7 @@ export default function Home({ data }) {
 
   useEffect(() => {
     console.log("CART", cart);
+    checkReadyToCheckout();
   }, [cart]);
 
   const handleSubmit = async (e) => {
@@ -93,7 +103,9 @@ export default function Home({ data }) {
         handleRemoveFromCart={handleRemoveFromCart}
       />
       <form onSubmit={handleSubmit}>
-        <button type="submit">Checkout</button>
+        <button type="submit" disabled={disabled}>
+          Checkout
+        </button>
       </form>
     </div>
   );
