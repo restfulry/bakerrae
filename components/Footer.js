@@ -1,9 +1,9 @@
 import Link from "next/link";
-import navStyles from "../styles/Nav.module.css";
+import footerStyles from "../styles/Footer.module.css";
 
-const Nav = () => {
+const Footer = () => {
   return (
-    <nav className={navStyles.nav}>
+    <nav className={footerStyles.nav}>
       <ul>
         <li>
           <Link href="/">ORDER</Link>
@@ -22,4 +22,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Footer;

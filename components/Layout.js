@@ -1,6 +1,6 @@
 import Nav from "./Nav";
 import Meta from "./Meta";
-import Header from "./Header";
+import Footer from "./Footer";
 import styles from "../styles/Layout.module.css";
 
 export const Layout = ({ children }) => {
@@ -9,11 +9,9 @@ export const Layout = ({ children }) => {
       <Meta />
       <Nav />
       <div className={styles.container}>
-        <main className={styles.main}>
-          <Header />
-          {children}
-        </main>
+        <main className={styles.main}>{children}</main>
       </div>
+      <Footer />
     </>
   );
 };
