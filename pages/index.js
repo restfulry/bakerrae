@@ -1,6 +1,7 @@
 import { server } from "../config";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 import BakeryDropList from "../components/BakeryDropList";
 import Shipping from "../components/Shipping";
@@ -117,6 +118,7 @@ export default function Home({ data }) {
           Checkout
         </button>
       </form>
+      <Image src="/20200927_A7S04418_004-min.jpg" width="350" height="350" />
     </div>
   );
 }
