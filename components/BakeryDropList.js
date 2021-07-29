@@ -5,6 +5,7 @@ const BakeryDropList = ({
   data,
   cart,
   cartQty,
+  server,
   handleAddToCart,
   handleRemoveFromCart,
 }) => {
@@ -32,6 +33,7 @@ const BakeryDropList = ({
         nextDrop={nextDrop}
         cart={cart}
         cartQty={cartQty}
+        server={server}
         handleAddToCart={handleAddToCart}
         handleRemoveFromCart={handleRemoveFromCart}
       />

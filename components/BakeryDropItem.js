@@ -7,6 +7,7 @@ const BakeryDropItem = ({
   nextDrop,
   cart,
   cartQty,
+  server,
   handleAddToCart,
   handleRemoveFromCart,
 }) => {
@@ -17,12 +18,23 @@ const BakeryDropItem = ({
       <h1>OUR NEXT DROP</h1>
       <h1>{nextDrop.dropDate}</h1>
       {products.map((product) => {
-        console.log("product MEDIA", JSON.stringify(product, null, 4));
+        console.log(
+          "product MEDIA",
+          JSON.stringify(product.media ? product.media.url : "null", null, 4)
+        );
         return (
           <div key={product.id}>
             <h3>{product.name}</h3>
             <h4>${product.price}</h4>
-            {/* <Image src={product.media} width="100" height="100" /> */}
+            {product.media ? (
+              <Image
+                src={server + product.media.url}
+                width="100"
+                height="100"
+              />
+            ) : (
+              <p>No media</p>
+            )}
             <p>
               {cartQty(product)}
               {""} in cart

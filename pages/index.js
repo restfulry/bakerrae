@@ -109,6 +109,7 @@ export default function Home({ data }) {
         data={data}
         cart={cart}
         cartQty={cartQty}
+        server={server}
         handleAddToCart={handleAddToCart}
         handleRemoveFromCart={handleRemoveFromCart}
       />
@@ -118,7 +119,6 @@ export default function Home({ data }) {
           Checkout
         </button>
       </form>
-      <Image src="/20200927_A7S04418_004-min.jpg" width="350" height="350" />
     </div>
   );
 }
