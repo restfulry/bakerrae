@@ -1,10 +1,13 @@
 import { server } from "../config";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 import BakeryDropList from "../components/BakeryDropList";
 import Shipping from "../components/Shipping";
+import InfoSection from "../components/InfoSection";
+import Reviews from "../components/Reviews";
+import HeroVideo from "../components/HeroVideo";
+import Footer from "../components/Footer";
 
 export default function Home({ data }) {
   const router = useRouter();
@@ -98,6 +101,24 @@ export default function Home({ data }) {
     router.push(url);
   };
 
+  const today = new Date();
+
+  const upcomingDrops = data.filter((drop) => new Date(drop.dropDate) > today);
+
+  const nextDropDate = new Date(
+    Math.min.apply(
+      null,
+      upcomingDrops.map((e) => {
+        return new Date(e.dropDate);
+      })
+    )
+  );
+
+  const nextDrop = data.filter((e) => {
+    const d = new Date(e.dropDate);
+    return d.getTime() == nextDropDate.getTime();
+  })[0];
+
   useEffect(() => {
     console.log("CART: ", JSON.stringify(cart, null, 4));
     checkReadyToCheckout();
@@ -105,8 +126,9 @@ export default function Home({ data }) {
 
   return (
     <div>
+      <InfoSection />
       <BakeryDropList
-        data={data}
+        nextDrop={nextDrop}
         cart={cart}
         cartQty={cartQty}
         server={server}
@@ -119,6 +141,9 @@ export default function Home({ data }) {
           Checkout
         </button>
       </form>
+      <Reviews />
+      <HeroVideo />
+      <Footer />
     </div>
   );
 }

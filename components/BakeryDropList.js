@@ -1,37 +1,20 @@
 import BakeryDropItem from "./BakeryDropItem";
-import articleStyles from "../styles/Article.module.css";
+import BakeryDropListStyles from "../styles/BakeryDropListStyles.module.css";
 
 const BakeryDropList = ({
-  data,
+  nextDrop,
   cart,
   cartQty,
   server,
   handleAddToCart,
   handleRemoveFromCart,
 }) => {
-  var today = new Date();
-
-  const upcomingDrops = data.filter((drop) => new Date(drop.dropDate) > today);
-
-  const nextDropDate = new Date(
-    Math.min.apply(
-      null,
-      upcomingDrops.map((e) => {
-        return new Date(e.dropDate);
-      })
-    )
-  );
-
-  const nextDrop = data.filter((e) => {
-    const d = new Date(e.dropDate);
-    return d.getTime() == nextDropDate.getTime();
-  })[0];
-
   return (
-    <div>
+    <div className="container">
+      <h1>OUR NEXT DROP</h1>
+      <h1>{nextDrop.dropDate}</h1>
       <BakeryDropItem
         nextDrop={nextDrop}
-        cart={cart}
         cartQty={cartQty}
         server={server}
         handleAddToCart={handleAddToCart}

@@ -1,0 +1,14 @@
+.section {
+  padding-top: 25px;
+  background-color: #ffd6b1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image {
+}
+
+.text {
+  width: 65%;
+}

@@ -2,10 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import navStyles from "../styles/Nav.module.css";
 
-// import logo from "../public/logo_ig_round.png";
-
-// const logo = require("../public/images/20200927_A7S04418_004-min.jpg");
-
 const Nav = () => {
   return (
     <nav className={navStyles.nav}>
