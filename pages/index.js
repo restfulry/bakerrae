@@ -7,6 +7,7 @@ import Shipping from "../components/Shipping";
 import InfoSection from "../components/InfoSection";
 import Reviews from "../components/Reviews";
 import HeroVideo from "../components/HeroVideo";
+import CheckoutButton from "../components/CheckoutButton";
 import Footer from "../components/Footer";
 
 export default function Home({ data }) {
@@ -147,11 +148,12 @@ export default function Home({ data }) {
         handlePickUp={handlePickUp}
         handleShipping={handleShipping}
       />
-      <form onSubmit={handleSubmit}>
+      <CheckoutButton handleSubmit={handleSubmit} disabled={disabled} />
+      {/* <form onSubmit={handleSubmit}>
         <button type="submit" disabled={disabled}>
           Checkout
         </button>
-      </form>
+      </form> */}
       <Reviews />
       <HeroVideo />
       <Footer />
