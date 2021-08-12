@@ -1,15 +1,15 @@
-const Shipping = ({ shipping, handleShipping }) => {
+const Shipping = ({ shipping, handlePickUp, handleShipping }) => {
   return (
     <div>
       <button
-        onClick={handleShipping}
-        disabled={shipping === "pickup" ? true : false}
+        onClick={handlePickUp}
+        className={shipping === "pickup" ? "btn-selected" : "btn"}
       >
         Pick Up
       </button>
       <button
         onClick={handleShipping}
-        disabled={shipping === "shipping" ? true : false}
+        className={shipping === "shipping" ? "btn-selected" : "btn"}
       >
         Delivery
       </button>

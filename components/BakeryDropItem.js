@@ -11,10 +11,10 @@ const BakeryDropItem = ({
   const products = nextDrop.products;
 
   return (
-    <div>
+    <div className={BakeryDropListStyles.productsSection}>
       {products.map((product) => {
         return (
-          <div key={product.id} className={BakeryDropListStyles.product}>
+          <div key={product.id} className={BakeryDropListStyles.productItem}>
             {product.media ? (
               <Image
                 src={server + product.media.url}
@@ -25,26 +25,31 @@ const BakeryDropItem = ({
               <p>No media</p>
             )}
             <h3>{product.name}</h3>
+            {/* <p>{product.description_short}</p> */}
             <h4>${product.price}</h4>
-            <div className="cartUtil">
+            <div className={BakeryDropListStyles.cartUtil}>
               <p>
                 {cartQty(product)}
                 {""} in cart
               </p>
-              <input
-                type="submit"
-                value="-"
-                onClick={() => {
-                  handleRemoveFromCart(product);
-                }}
-              />
-              <input
-                type="submit"
-                value="+"
-                onClick={() => {
-                  handleAddToCart(product);
-                }}
-              />
+              <div>
+                <input
+                  type="submit"
+                  className={BakeryDropListStyles.btn}
+                  value="-"
+                  onClick={() => {
+                    handleRemoveFromCart(product);
+                  }}
+                />
+                <input
+                  type="submit"
+                  className={BakeryDropListStyles.btn}
+                  value="+"
+                  onClick={() => {
+                    handleAddToCart(product);
+                  }}
+                />
+              </div>
             </div>
           </div>
         );

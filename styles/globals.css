@@ -30,6 +30,15 @@ body {
 
 h1 {
   font-family: "Gatwick", Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+  color: #222;
 }
 
 a {
@@ -39,4 +48,43 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  background-color: #222;
+  color: #f9f9f9;
+  padding: 5px 15px;
+  border: 1px solid #f9f9f9;
+  margin: 2px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 15px;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.btn-selected {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+button:disabled:hover {
+  background-color: #f9f9f9;
+  color: #222;
+  padding: 5px 15px;
+  border: 1px solid #f9f9f9;
+  cursor: default;
+}
+
+button:hover {
+  background-color: #f9f9f9;
+  color: #222;
+  padding: 5px 15px;
+  border: 1px solid #222;
+  cursor: pointer;
 }

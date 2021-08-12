@@ -81,9 +81,12 @@ export default function Home({ data }) {
 
   const handleShipping = () => {
     console.log("shipping", shipping);
-    return shipping === "shipping"
-      ? setShipping("pickup")
-      : setShipping("shipping");
+    return setShipping("shipping");
+  };
+
+  const handlePickUp = () => {
+    console.log("Pickup", shipping);
+    return setShipping("pickup");
   };
 
   const handleSubmit = async (e) => {
@@ -124,6 +127,10 @@ export default function Home({ data }) {
     checkReadyToCheckout();
   }, [cart]);
 
+  useEffect(() => {
+    console.log("SHIPPING SELECTION: ", JSON.stringify(shipping, null, 4));
+  }, [shipping]);
+
   return (
     <div>
       <InfoSection />
@@ -135,7 +142,11 @@ export default function Home({ data }) {
         handleAddToCart={handleAddToCart}
         handleRemoveFromCart={handleRemoveFromCart}
       />
-      <Shipping shipping={shipping} handleShipping={handleShipping} />
+      <Shipping
+        shipping={shipping}
+        handlePickUp={handlePickUp}
+        handleShipping={handleShipping}
+      />
       <form onSubmit={handleSubmit}>
         <button type="submit" disabled={disabled}>
           Checkout
