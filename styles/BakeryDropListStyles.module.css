@@ -1,9 +1,12 @@
 .productItem {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px 10px;
+  width: 15rem;
+  height: 27rem;
+  /* background-color: red; */
 }
 
 .productInfo {
@@ -13,7 +16,14 @@
   align-items: center;
 }
 
+.productInfo > h3 {
+  font-size: 1.1rem;
+  align-items: center;
+  height: 1rem;
+}
+
 .productInfo > h4 {
+  height: 1rem;
   margin-top: -15px;
 }
 
@@ -23,7 +33,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* margin-top: -5px; */
   outline: 1px solid rgba(34, 2, 0, 0.1);
 }
 

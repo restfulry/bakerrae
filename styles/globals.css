@@ -39,6 +39,7 @@ body {
 
 .sectionOrange {
   padding-top: 25px;
+  padding-bottom: 25px;
   background-color: #ffd6b1;
   display: flex;
   align-items: center;

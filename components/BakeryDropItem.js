@@ -18,7 +18,7 @@ const BakeryDropItem = ({
             {product.media ? (
               <Image
                 src={server + product.media.url}
-                width="350"
+                width="150"
                 height="250"
               />
             ) : (
@@ -26,6 +26,7 @@ const BakeryDropItem = ({
             )}
             <div className={BakeryDropListStyles.productInfo}>
               <h3 className="title">{product.name}</h3>
+              <h4 className="title">{product.description_quantity}</h4>
               {/* <p>{product.description_short}</p> */}
               <h4>${product.price}</h4>
             </div>
@@ -53,7 +54,6 @@ const BakeryDropItem = ({
           </div>
         );
       })}
-      <h3></h3>
     </div>
   );
 };

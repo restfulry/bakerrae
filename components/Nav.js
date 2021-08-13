@@ -7,7 +7,7 @@ const Nav = () => {
     <nav className={navStyles.nav}>
       <ul>
         <li>
-          <Image src="/logo_ig_round.png" width="50" height="50" alt="pic" />
+          <Image src="/logo.png" width="70" height="70" alt="pic" />
         </li>
         <li>
           <Link href="/">ORDER</Link>
