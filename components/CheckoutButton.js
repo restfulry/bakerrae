@@ -2,12 +2,14 @@ import React from "react";
 
 const CheckoutButton = ({ handleSubmit, disabled }) => {
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <button type="submit" disabled={disabled}>
-          Checkout
-        </button>
-      </form>
+    <div className="centerWhite">
+      <div className="sectionWhite">
+        <form onSubmit={handleSubmit}>
+          <button type="submit" disabled={disabled}>
+            PLACE ORDER
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

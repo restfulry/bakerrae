@@ -9,7 +9,7 @@ const BakeryDropList = ({
   handleRemoveFromCart,
 }) => {
   return (
-    <div className={BakeryDropListStyles.section}>
+    <div className="sectionWhite">
       <div className="container">
         <h1>OUR NEXT DROP</h1>
         <h1>{nextDrop.dropDate}</h1>

@@ -28,7 +28,32 @@ body {
   }
 }
 
-h1 {
+.sectionWhite {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionOrange {
+  padding-top: 25px;
+  background-color: #ffd6b1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centerWhite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+h1,
+.title {
   font-family: "Gatwick", Arial, Helvetica, sans-serif;
   color: #222;
 }
@@ -62,17 +87,20 @@ button {
   font-size: 15px;
 }
 
-button:disabled,
-button[disabled] {
+button:hover {
   background-color: #f9f9f9;
-  border: 1px solid #f9f9f9;
   color: #222;
+  padding: 5px 15px;
+  border: 1px solid #222;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-selected {
   background-color: #f9f9f9;
   border: 1px solid #222;
   color: #222;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-selected:hover {
@@ -82,18 +110,18 @@ button[disabled] {
   cursor: default;
 }
 
+button:disabled,
+button[disabled] {
+  background-color: #f9f9f9;
+  border: 1px solid #222;
+  color: #222;
+}
+
 button:disabled:hover {
   background-color: #f9f9f9;
   color: #222;
   padding: 5px 15px;
-  border: 1px solid #f9f9f9;
-  cursor: default;
-}
-
-button:hover {
-  background-color: #f9f9f9;
-  color: #222;
-  padding: 5px 15px;
   border: 1px solid #222;
-  cursor: pointer;
+  cursor: default;
+  box-shadow: none;
 }

@@ -11,7 +11,7 @@ const BakeryDropItem = ({
   const products = nextDrop.products;
 
   return (
-    <div className={BakeryDropListStyles.productsSection}>
+    <div className="centerWhite">
       {products.map((product) => {
         return (
           <div key={product.id} className={BakeryDropListStyles.productItem}>
@@ -22,34 +22,33 @@ const BakeryDropItem = ({
                 height="250"
               />
             ) : (
-              <p>No media</p>
+              <p>Product Image</p>
             )}
-            <h3>{product.name}</h3>
-            {/* <p>{product.description_short}</p> */}
-            <h4>${product.price}</h4>
+            <div className={BakeryDropListStyles.productInfo}>
+              <h3 className="title">{product.name}</h3>
+              {/* <p>{product.description_short}</p> */}
+              <h4>${product.price}</h4>
+            </div>
             <div className={BakeryDropListStyles.cartUtil}>
-              <p>
-                {cartQty(product)}
-                {""} in cart
-              </p>
-              <div>
-                <input
-                  type="submit"
-                  className={BakeryDropListStyles.btn}
-                  value="-"
-                  onClick={() => {
-                    handleRemoveFromCart(product);
-                  }}
-                />
-                <input
-                  type="submit"
-                  className={BakeryDropListStyles.btn}
-                  value="+"
-                  onClick={() => {
-                    handleAddToCart(product);
-                  }}
-                />
+              <input
+                type="submit"
+                className={BakeryDropListStyles.btn}
+                value="-"
+                onClick={() => {
+                  handleRemoveFromCart(product);
+                }}
+              />
+              <div className={BakeryDropListStyles.cartQty}>
+                <p>{cartQty(product)}</p>
               </div>
+              <input
+                type="submit"
+                className={BakeryDropListStyles.btn}
+                value="+"
+                onClick={() => {
+                  handleAddToCart(product);
+                }}
+              />
             </div>
           </div>
         );
