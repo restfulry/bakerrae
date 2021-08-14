@@ -10,21 +10,13 @@ const Reviews = () => {
       </div>
       <div className="sectionOrange">
         <div className={ReviewsStyles.quote}>
-          <Image src={"/quote1.png"} width="200" height="200" />
+          <Image src={"/quote1.png"} width="400" height="400" />
         </div>
         <div className={ReviewsStyles.quote}>
-          <Image
-            src={"/20200927_A7S04418_004-min.png"}
-            width="200"
-            height="200"
-          />
+          <Image src={"/quote2.png"} width="400" height="400" />
         </div>
         <div className={ReviewsStyles.quote}>
-          <Image
-            src={"/20200927_A7S04418_004-min.png"}
-            width="200"
-            height="200"
-          />
+          <Image src={"/quote3.png"} width="400" height="400" />
         </div>
       </div>
     </div>
