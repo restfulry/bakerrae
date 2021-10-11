@@ -1,56 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @font-face {
+  font-family: "Gatwick-Light";
+  src: local("Gatwick"),
+    url(../public/fonts/Gatwick-Light.otf) format("truetype");
+}
+@font-face {
   font-family: "Gatwick";
   src: local("Gatwick"),
-    url(../public/fonts/Gatwick-Ultralight.otf) format("truetype");
+    url(../public/fonts/Gatwick-Light.otf) format("truetype");
+}
+
+/* 
+Colour Guide
+White: #f9f9f9
+Orange: #ffd6b1
+Black: #222
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Helvetica, sans-serif;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", Helvetica, sans-serif;
   background-color: #ffd6b1;
+  scroll-behavior: smooth;
 }
 
 .container {
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
+  /* max-width: 1300px; */
   margin-right: auto;
   margin-left: auto;
-  padding-right: 50px;
-  padding-left: 50px;
-
-  @media screen and (max-width: 991px) {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-
-.sectionWhite {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-color: #f9f9f9;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.sectionOrange {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-color: #ffd6b1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.centerWhite {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f9f9;
+  /* padding: 50px; */
 }
 
 h1,
@@ -70,10 +58,6 @@ p {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 button {
@@ -114,8 +98,8 @@ button:hover {
 button:disabled,
 button[disabled] {
   background-color: #f9f9f9;
-  border: 1px solid #222;
-  color: #222;
+  border: 1px solid #7e7e7e;
+  color: #7e7e7e;
 }
 
 button:disabled:hover {
@@ -126,3 +110,13 @@ button:disabled:hover {
   cursor: default;
   box-shadow: none;
 }
+
+/* @media screen and (max-width: 991px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+} */

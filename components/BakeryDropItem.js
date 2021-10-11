@@ -11,10 +11,10 @@ const BakeryDropItem = ({
   const products = nextDrop.products;
 
   return (
-    <div className="centerWhite">
+    <div className={BakeryDropListStyles.dropItems}>
       {products.map((product) => {
         return (
-          <div key={product.id} className={BakeryDropListStyles.productItem}>
+          <div key={product.id} className={BakeryDropListStyles.dropItem}>
             {product.media ? (
               <Image
                 src={server + product.media.url}
@@ -25,10 +25,16 @@ const BakeryDropItem = ({
               <p>Product Image</p>
             )}
             <div className={BakeryDropListStyles.productInfo}>
-              <h3 className="title">{product.name}</h3>
-              <h4 className="title">{product.description_quantity}</h4>
+              <h3 className={BakeryDropListStyles.productName}>
+                {product.name}
+              </h3>
+              <div className={BakeryDropListStyles.productDescription}>
+                <h4>{product.description_quantity}</h4>
+              </div>
               {/* <p>{product.description_short}</p> */}
-              <h4>${product.price}</h4>
+              <div className={BakeryDropListStyles.productPrice}>
+                <h4>${product.price}</h4>
+              </div>
             </div>
             <div className={BakeryDropListStyles.cartUtil}>
               <input
