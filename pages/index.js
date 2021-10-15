@@ -10,6 +10,7 @@ import Reviews from "../components/Reviews";
 import HeroVideo from "../components/HeroVideo";
 import ImageSection from "../components/ImageSection";
 import CheckoutButton from "../components/CheckoutButton";
+import Accordion from "../components/Accordion";
 import Footer from "../components/Footer";
 
 export default function Home({ data }) {
@@ -18,6 +19,12 @@ export default function Home({ data }) {
   const [cart, setCart] = useState([]);
   const [shipping, setShipping] = useState("pickup");
   const [disabled, setDisabled] = useState(true);
+
+  const faqData = {
+    question: "How long do your cinnamon buns keep?",
+    answer:
+      "We recommend you eat your buns as soon as possible for the best quality. However, you can keep them in an airtight container for up to 2 weeks. To reheat, microwave for 30s - 1min until warm.",
+  };
 
   const itemInCart = (product) => {
     let itemInCart = cart.find((item) => item.product.id === product.id);
@@ -152,6 +159,7 @@ export default function Home({ data }) {
       />
       <CheckoutButton handleSubmit={handleSubmit} disabled={disabled} />
       <DetailsSection nextDrop={nextDrop} />
+      <Accordion faqData={faqData} />
       <HeroVideo />
       <Reviews />
       <ImageSection />
