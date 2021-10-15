@@ -6,7 +6,6 @@
   padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
-  max-width: 1300px;
 }
 
 .header {
@@ -15,15 +14,14 @@
 
 .reviews {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 15px;
 }
 
-.quote {
+.textWrapper {
   padding: 15px;
-}
-
-.quoteItem {
+  flex: 1;
 }
 
 .background {

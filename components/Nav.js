@@ -7,7 +7,11 @@ const Nav = () => {
     <nav className={navStyles.nav}>
       <ul>
         <li>
-          <Image src="/logo.png" width="70" height="70" alt="pic" />
+          <div className={navStyles.logo}>
+            <Link href="/">
+              <Image src="/logo.png" width="70" height="70" alt="pic" />
+            </Link>
+          </div>
         </li>
         <li>
           <Link href="/">ORDER</Link>

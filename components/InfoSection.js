@@ -8,10 +8,9 @@ const InfoSection = () => {
       <div className={InfoSectionStyles.wrapper}>
         <div className={InfoSectionStyles.left}>
           <div className={InfoSectionStyles.image2}>
-            <Image src={"/daycoldbrew.png"} width="300" height="450" />
+            <Image src={"/cinnamonbuns.jpg"} width="333" height="445" />
           </div>
           <div>
-            {/* <Image src={"/blurredcircle_orange.png"} width="400" height="400" /> */}
             <h3>Pre-order for the next drop.</h3>
           </div>
         </div>
@@ -22,11 +21,7 @@ const InfoSection = () => {
             <h3>Women-run. Small-batch. Asian flavours.</h3>
           </div>
           <div className={InfoSectionStyles.image1}>
-            <Image
-              src={"/20200927_A7S04418_004-min.jpg"}
-              width="300"
-              height="400"
-            />
+            <Image src={"/ooze.jpg"} width="300" height="400" />
           </div>
         </div>
       </div>

@@ -21,3 +21,11 @@
 .nav ul li a {
   margin: 5px 20px;
 }
+
+.logo:hover {
+  cursor: default;
+  transform: rotate(20);
+}
+
+.logo {
+}
