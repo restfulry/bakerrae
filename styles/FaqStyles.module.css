@@ -12,9 +12,10 @@
 }
 
 .subHeader {
+  display: flex;
   padding-left: 40px;
   padding-right: 40px;
-  padding-top: 100%;
+  padding-top: 33%;
 }
 
 .faqAccordion {
