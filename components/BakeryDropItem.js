@@ -15,15 +15,17 @@ const BakeryDropItem = ({
       {products.map((product) => {
         return (
           <div key={product.id} className={BakeryDropListStyles.dropItem}>
-            {product.media ? (
-              <Image
-                src={server + product.media.url}
-                width="150"
-                height="250"
-              />
-            ) : (
-              <p>Product Image</p>
-            )}
+            <div className={BakeryDropListStyles.mediaDetail}>
+              {product.media ? (
+                <Image
+                  src={server + product.media.url}
+                  width="200"
+                  height="200"
+                />
+              ) : (
+                <p>Product Image</p>
+              )}
+            </div>
             <div className={BakeryDropListStyles.productInfo}>
               <h3 className={BakeryDropListStyles.productName}>
                 {product.name}

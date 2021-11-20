@@ -40,13 +40,14 @@ const DetailsSection = ({ nextDrop }) => {
           </div>
           <div className={DetailsSectionStyles.textWrapper}>
             <h3>Delivery Details</h3>
-            <h4>We deliver to Downtown, North York, Scarborough & Markham</h4>
+            <h4>Downtown, North York, Scarborough & Markham</h4>
           </div>
           <div className={DetailsSectionStyles.textWrapper}>
             <h3>Pickup Points</h3>
-            <h4>Pickups are from 11am - 12pm on the day of the drop. </h4>
+            <h4>Pickups are from 9am - 11am.</h4>
             <h4>
-              Pickups are available in Scarborough and Downtown (Union Station){" "}
+              Pickups are available in Scarborough (Eg Go) and Downtown TO
+              (Union).
             </h4>
           </div>
         </div>

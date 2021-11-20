@@ -8,10 +8,14 @@ const InfoSection = () => {
       <div className={InfoSectionStyles.wrapper}>
         <div className={InfoSectionStyles.left}>
           <div className={InfoSectionStyles.image2}>
-            <Image src={"/cinnamonbuns.jpg"} width="333" height="445" />
+            <Image src={"/cinnamondonuts-min.JPG"} width="333" height="445" />
           </div>
           <div>
-            <h3>Pre-order for the next drop.</h3>
+            <h1>A nurse with a passion.</h1>
+            <h3>
+              Bakerrae was started by Rhea, a covid testing nurse, amidst the
+              lockdowns.
+            </h3>
           </div>
         </div>
 

@@ -155,10 +155,10 @@ export default function Home({ data }) {
       />
       <CheckoutButton handleSubmit={handleSubmit} disabled={disabled} />
       <DetailsSection nextDrop={nextDrop} />
-      <FaqComponent faqData={faqData} />
       <HeroVideo />
       <Reviews />
       <ImageSection />
+      <FaqComponent faqData={faqData} />
       <Footer />
     </div>
   );
