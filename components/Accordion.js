@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import FaqStyles from "../styles/FaqStyles.module.css";
+
 const Accordion = ({ question, answer }) => {
   const [isActive, setIsActive] = useState(false);
 
@@ -8,13 +10,15 @@ const Accordion = ({ question, answer }) => {
   };
 
   return (
-    <div className="accordion-item">
-      <div className="accordion-title" onClick={handleIsActive}>
-        <div>{question}</div>
+    <div className={FaqStyles.accordionItem}>
+      <div className={FaqStyles.accordionTitle} onClick={handleIsActive}>
+        <div>
+          <h3>{question}</h3>
+        </div>
         <div>{isActive ? "-" : "+"}</div>
       </div>
 
-      {isActive && <div className="accordion-content">{answer}</div>}
+      {isActive && <div className={FaqStyles.accordionContent}>{answer}</div>}
     </div>
   );
 };

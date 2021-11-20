@@ -10,7 +10,7 @@ import Reviews from "../components/Reviews";
 import HeroVideo from "../components/HeroVideo";
 import ImageSection from "../components/ImageSection";
 import CheckoutButton from "../components/CheckoutButton";
-import Accordion from "../components/Accordion";
+import FaqComponent from "../components/FaqComponent";
 import Footer from "../components/Footer";
 
 import { faqData } from "../utils/content";
@@ -155,11 +155,7 @@ export default function Home({ data }) {
       />
       <CheckoutButton handleSubmit={handleSubmit} disabled={disabled} />
       <DetailsSection nextDrop={nextDrop} />
-      <div className="faq-accordion">
-        {faqData.map(({ question, answer }) => (
-          <Accordion question={question} answer={answer} />
-        ))}
-      </div>
+      <FaqComponent faqData={faqData} />
       <HeroVideo />
       <Reviews />
       <ImageSection />

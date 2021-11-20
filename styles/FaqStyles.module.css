@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+.faqWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 50px;
+}
+
+.subHeader {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 100%;
+}
+
+.faqAccordion {
+  width: 50%;
+}
+
+.accordionItem {
+  padding: 15px;
+}
+
+.accordionTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordionContent {
+  padding-top: 10px;
+}

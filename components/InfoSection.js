@@ -18,7 +18,7 @@ const InfoSection = () => {
         <div className={InfoSectionStyles.right}>
           <div className={InfoSectionStyles.text}>
             <h1>Filipino-inspired baked goods & cold brew concentrate.</h1>
-            <h3>Women-run. Small-batch. Asian flavours.</h3>
+            <h3>Woman-run. Small-batch. Asian flavours.</h3>
           </div>
           <div className={InfoSectionStyles.image1}>
             <Image src={"/ooze.jpg"} width="300" height="400" />
