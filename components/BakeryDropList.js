@@ -13,7 +13,7 @@ const BakeryDropList = ({
   handleAddToCart,
   handleRemoveFromCart,
   shipping,
-  handlePickUp,
+  shippingOptions,
   handleShipping,
   handleSubmit,
   disabled,
@@ -36,7 +36,7 @@ const BakeryDropList = ({
       </div>
       <Shipping
         shipping={shipping}
-        handlePickUp={handlePickUp}
+        shippingOptions={shippingOptions}
         handleShipping={handleShipping}
       />
       <CheckoutButton handleSubmit={handleSubmit} disabled={disabled} />

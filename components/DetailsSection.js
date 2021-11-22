@@ -39,8 +39,12 @@ const DetailsSection = ({ nextDrop }) => {
             <h4>The next drop is on {nextDrop.dropDate}</h4>
           </div>
           <div className={DetailsSectionStyles.textWrapper}>
-            <h3>Delivery Details</h3>
-            <h4>Downtown, North York, Scarborough & Markham</h4>
+            <h3>Local Delivery</h3>
+            <h4>Downtown, North York, Scarborough, Etobicoke</h4>
+          </div>
+          <div className={DetailsSectionStyles.textWrapper}>
+            <h3>GTA Delivery</h3>
+            <h4>Mississauga, Markham, Vaughan, Richmond Hill, Brampton</h4>
           </div>
           <div className={DetailsSectionStyles.textWrapper}>
             <h3>Pickup Points</h3>

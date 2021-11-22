@@ -11,9 +11,9 @@ const FaqComponent = ({ faqData }) => {
           <h1>General FAQs</h1>
           <Image src={"/line.svg"} width="70" height="10" />
         </div>
-        <div className={FaqStyles.faqAccordion}>
-          {faqData.map(({ question, answer }) => (
-            <Accordion question={question} answer={answer} />
+        <div className={FaqStyles.faqAccordion} key="faqAccordion">
+          {faqData.map(({ question, answer, idx }) => (
+            <Accordion question={question} answer={answer} idx={idx} />
           ))}
         </div>
       </div>

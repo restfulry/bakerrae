@@ -3,13 +3,11 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 import BakeryDropList from "../components/BakeryDropList";
-import Shipping from "../components/Shipping";
 import DetailsSection from "../components/DetailsSection";
 import InfoSection from "../components/InfoSection";
 import Reviews from "../components/Reviews";
 import HeroVideo from "../components/HeroVideo";
 import ImageSection from "../components/ImageSection";
-import CheckoutButton from "../components/CheckoutButton";
 import FaqComponent from "../components/FaqComponent";
 import Footer from "../components/Footer";
 
@@ -19,8 +17,15 @@ export default function Home({ data }) {
   const router = useRouter();
 
   const [cart, setCart] = useState([]);
-  const [shipping, setShipping] = useState("pickup");
+  const [shipping, setShipping] = useState("Free Pickup (Scarborough)");
   const [disabled, setDisabled] = useState(true);
+
+  const shippingOptions = [
+    "Free Pickup (Scarborough)",
+    "Free Pickup (Downtown)",
+    "Local Delivery ($5)",
+    "GTA Delivery ($10)",
+  ];
 
   const itemInCart = (product) => {
     let itemInCart = cart.find((item) => item.product.id === product.id);
@@ -85,14 +90,9 @@ export default function Home({ data }) {
     return setCart([...cleanCartMap]);
   };
 
-  const handleShipping = () => {
-    console.log("shipping", shipping);
-    return setShipping("shipping");
-  };
-
-  const handlePickUp = () => {
-    console.log("Pickup", shipping);
-    return setShipping("pickup");
+  const handleShipping = (shippingOption) => {
+    console.log("Shipping selected", shipping);
+    return setShipping(shippingOption);
   };
 
   const handleSubmit = async (e) => {
@@ -148,12 +148,11 @@ export default function Home({ data }) {
         handleAddToCart={handleAddToCart}
         handleRemoveFromCart={handleRemoveFromCart}
         shipping={shipping}
-        handlePickUp={handlePickUp}
+        shippingOptions={shippingOptions}
         handleShipping={handleShipping}
         handleSubmit={handleSubmit}
         disabled={disabled}
       />
-
       <DetailsSection nextDrop={nextDrop} />
       <HeroVideo />
       <Reviews />
