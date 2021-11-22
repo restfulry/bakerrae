@@ -147,13 +147,13 @@ export default function Home({ data }) {
         server={server}
         handleAddToCart={handleAddToCart}
         handleRemoveFromCart={handleRemoveFromCart}
-      />
-      <Shipping
         shipping={shipping}
         handlePickUp={handlePickUp}
         handleShipping={handleShipping}
+        handleSubmit={handleSubmit}
+        disabled={disabled}
       />
-      <CheckoutButton handleSubmit={handleSubmit} disabled={disabled} />
+
       <DetailsSection nextDrop={nextDrop} />
       <HeroVideo />
       <Reviews />

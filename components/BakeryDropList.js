@@ -1,6 +1,9 @@
 import Image from "next/image";
 
 import BakeryDropItem from "./BakeryDropItem";
+import Shipping from "../components/Shipping";
+import CheckoutButton from "../components/CheckoutButton";
+
 import BakeryDropListStyles from "../styles/BakeryDropListStyles.module.css";
 
 const BakeryDropList = ({
@@ -9,6 +12,11 @@ const BakeryDropList = ({
   server,
   handleAddToCart,
   handleRemoveFromCart,
+  shipping,
+  handlePickUp,
+  handleShipping,
+  handleSubmit,
+  disabled,
 }) => {
   return (
     <div className="container">
@@ -26,6 +34,12 @@ const BakeryDropList = ({
           handleRemoveFromCart={handleRemoveFromCart}
         />
       </div>
+      <Shipping
+        shipping={shipping}
+        handlePickUp={handlePickUp}
+        handleShipping={handleShipping}
+      />
+      <CheckoutButton handleSubmit={handleSubmit} disabled={disabled} />
     </div>
   );
 };
