@@ -4,7 +4,7 @@ import ReviewsStyles from "../styles/ReviewsStyles.module.css";
 const Reviews = () => {
   return (
     <div className="container">
-      <div className={ReviewsStyles.wrapper}>
+      <div className={ReviewsStyles.reviewsWrapper}>
         <div className={ReviewsStyles.header}>
           <h1>What people are saying</h1>
           <Image src={"/line.svg"} width="70" height="10" />

@@ -12,10 +12,12 @@ const Footer = () => {
           <Link href="/about">ABOUT</Link>
         </li>
         <li>
-          <Link href="/contact">CONTACT</Link>
+          <Link href="/faq">FAQ</Link>
         </li>
         <li>
-          <Link href="/faq">FAQ</Link>
+          <Link href="https://www.instagram.com/bakerraexcafe/">
+            <a target="_blank">INSTAGRAM</a>
+          </Link>
         </li>
       </ul>
     </nav>

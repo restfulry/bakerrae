@@ -115,9 +115,8 @@ export default function Home({ data }) {
   const upcomingDrops = data.filter((drop) => new Date(drop.dropDate) > today);
 
   const nextDropDate = new Date(
-    Math.min.apply(
-      null,
-      upcomingDrops.map((e) => {
+    Math.min(
+      ...upcomingDrops.map((e) => {
         return new Date(e.dropDate);
       })
     )

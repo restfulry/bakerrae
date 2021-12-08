@@ -1,4 +1,4 @@
-.wrapper {
+.infowrapper {
   display: flex;
   justify-content: space-around;
   background-color: #ffd6b1;
@@ -6,7 +6,7 @@
   /* max-width: 1300px; */
 }
 
-.left,
+.infoleft,
 .right {
   display: flex;
   flex: 1;

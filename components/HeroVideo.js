@@ -4,7 +4,7 @@ import HeroVideoStyles from "../styles/HeroVideoStyles.module.css";
 const HeroVideo = () => {
   return (
     <div className="container">
-      <div className={HeroVideoStyles.wrapper}>
+      <div className={HeroVideoStyles.heroVidWrapper}>
         <div className={HeroVideoStyles.header}>
           <h1>As seen on BlogTO</h1>
           <Image src={"/line.svg"} width="70" height="10" />

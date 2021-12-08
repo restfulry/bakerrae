@@ -6,7 +6,7 @@ const ImageSection = () => {
     <div className="container">
       <div className={ImageSectionStyles.imgWrapper}>
         <div className={ImageSectionStyles.img}>
-          <Image src={"/cindonutssquare.jpg"} width="500" height="500" />
+          <Image src={"/product_halohalo.jpg"} width="500" height="500" />
         </div>
         <div className={ImageSectionStyles.img}>
           <Image src={"/raetorchsquare.jpg"} width="500" height="500" />

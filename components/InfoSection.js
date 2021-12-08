@@ -5,12 +5,12 @@ import InfoSectionStyles from "../styles/InfoSectionStyles.module.css";
 const InfoSection = () => {
   return (
     <div className="container">
-      <div className={InfoSectionStyles.wrapper}>
-        <div className={InfoSectionStyles.left}>
+      <div className={InfoSectionStyles.infowrapper}>
+        <div className={InfoSectionStyles.infoleft}>
           <div className={InfoSectionStyles.image2}>
             <Image src={"/cinnamondonuts-min.JPG"} width="333" height="445" />
           </div>
-          <div>
+          <div className={InfoSectionStyles.text}>
             <h1>A nurse with a passion.</h1>
             <h3>
               Bakerrae was started by Rhea, a covid testing nurse, amidst the
@@ -25,7 +25,7 @@ const InfoSection = () => {
             <h3>Woman-run. Small-batch. Asian flavours.</h3>
           </div>
           <div className={InfoSectionStyles.image1}>
-            <Image src={"/ooze.jpg"} width="300" height="400" />
+            <Image src={"/cinnamonbuns.jpg"} width="300" height="400" />
           </div>
         </div>
       </div>

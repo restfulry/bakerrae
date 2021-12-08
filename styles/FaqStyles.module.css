@@ -34,3 +34,21 @@
 .accordionContent {
   padding-top: 10px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .faqWrapper {
+    flex-direction: column;
+  }
+
+  .subHeader {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .faqAccordion {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
