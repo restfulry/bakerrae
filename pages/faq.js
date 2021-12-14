@@ -6,7 +6,6 @@ import FaqStyles from "../styles/FaqStyles.module.css";
 const faq = () => {
   return (
     <div>
-      {/* <h1 className={FaqStyles.header}>FAQ</h1> */}
       <FaqComponent faqData={faqData} />
     </div>
   );

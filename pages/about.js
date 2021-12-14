@@ -31,7 +31,6 @@ const about = () => {
   return (
     <div>
       <AboutSection sectionOne={sectionOne} />
-      {/* <TextImageSection sectionTwo={sectionTwo} /> */}
     </div>
   );
 };
