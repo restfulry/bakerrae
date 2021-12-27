@@ -163,6 +163,10 @@ export default function Home({ data }) {
 }
 
 export const getServerSideProps = async () => {
+  console.log('PROCESS ENV', process.env);
+
+  console.log('SERVER', process.env.NEXT_PUBLIC_API);
+
   const res = await fetch(`${server}/bakerydrops`);
   const data = await res.json();
 
