@@ -338,7 +338,7 @@ const InfoSection = () => {
         }), /*#__PURE__*/jsx_runtime_.jsx("div", {
           className: (InfoSectionStyles_module_default()).image1,
           children: /*#__PURE__*/jsx_runtime_.jsx(next_image.default, {
-            src: "/cinnamonbuns.jpg",
+            src: "/cinnamonbuns.JPG",
             width: "300",
             height: "400"
           })

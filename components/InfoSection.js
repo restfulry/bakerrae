@@ -25,7 +25,7 @@ const InfoSection = () => {
             <h3>Woman-run. Small-batch. Asian flavours.</h3>
           </div>
           <div className={InfoSectionStyles.image1}>
-            <Image src={"/cinnamonbuns.jpg"} width="300" height="400" />
+            <Image src={"/cinnamonbuns.JPG"} width="300" height="400" />
           </div>
         </div>
       </div>
