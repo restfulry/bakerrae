@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @font-face {
   font-family: "Gatwick-Light";
-  src: local("Gatwick"),
-    url(../public/fonts/Gatwick-Light.otf) format("truetype");
+  /* src: local("Gatwick"), */
+  src: url("/fonts/Gatwick-Light.otf") format("truetype");
 }
 @font-face {
   font-family: "Gatwick";
-  src: local("Gatwick"),
-    url(../public/fonts/Gatwick-Light.otf) format("truetype");
+  /* src: local("Gatwick"), */
+  src: url("/fonts/Gatwick-Light.otf") format("truetype");
 }
 
 /* 
