@@ -163,15 +163,15 @@ export default function Home({ data }) {
 }
 
 export const getServerSideProps = async () => {
-  console.log('PROCESS ENV', process.env);
+  // console.log('PROCESS ENV', process.env);
 
   console.log('SERVER NEXT PUBLIC API', process.env.NEXT_PUBLIC_API);
-  console.log('SERVER Calculated', `${server}`);
+  console.log('USING SERVER: ', `${server}`);
 
   const res = await fetch(`${server}/bakerydrops`);
   const data = await res.json();
 
-  console.log("DATA", data);
+  // console.log("DATA", data);
 
   if (!data) {
     return {
