@@ -10,6 +10,10 @@ const BakeryDropItem = ({
 }) => {
   const products = nextDrop.products;
 
+products.map((product)=> {
+  console.log("BAKERYDROPITEM - Product Media Url", product.media.url)
+})
+
   return (
     <div className={BakeryDropListStyles.dropItems}>
       {products.map((product) => {
