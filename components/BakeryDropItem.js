@@ -12,6 +12,7 @@ const BakeryDropItem = ({
 
 products.map((product)=> {
   console.log("BAKERYDROPITEM - Product Media Url", product.media.url)
+  console.log("Product Image SRC", server + product.media.url)
 })
 
   return (
