@@ -170,6 +170,8 @@ export const getServerSideProps = async () => {
   const res = await fetch(`${server}/bakerydrops`);
   const data = await res.json();
 
+  console.log("DATA", data);
+
   if (!data) {
     return {
       notFound: true,
