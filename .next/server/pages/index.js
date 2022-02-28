@@ -136,8 +136,7 @@ __webpack_require__.d(__webpack_exports__, {
 var jsx_runtime_ = __webpack_require__(997);
 ;// CONCATENATED MODULE: ./config/index.js
 const dev = "production" !== "production";
-// console.log('SERVER', process.env.NEXT_PUBLIC_API);
-const server = dev ? "http://localhost:1337" : process.env.NEXT_PUBLIC_API;
+const server = dev ? "http://localhost:1337" : "https://api.bakerrae.com";
 
 ;// CONCATENATED MODULE: external "next/router"
 const router_namespaceObject = require("next/router");
@@ -832,7 +831,7 @@ function Home({ data: data1  }) {
 };
 const getServerSideProps = async ()=>{
     // console.log('PROCESS ENV', process.env);
-    console.log('SERVER NEXT PUBLIC API', process.env.NEXT_PUBLIC_API);
+    console.log('SERVER NEXT PUBLIC API', "https://api.bakerrae.com");
     console.log('USING SERVER: ', server);
     const res = await fetch(`${server}/bakerydrops`);
     const data = await res.json();
