@@ -155,8 +155,9 @@ var BakeryDropListStyles_module_default = /*#__PURE__*/__webpack_require__.n(Bak
 const BakeryDropItem = ({ nextDrop , cartQty , server , handleAddToCart , handleRemoveFromCart ,  })=>{
     const products = nextDrop.products;
     products.map((product)=>{
-        console.log("BAKERYDROPITEM - Product Media Url", product.media.url);
-        console.log("Product Image SRC", server + product.media.url);
+        console.log("BAKERYDROPITEM - Product Media Url: ", product.media.url);
+        console.log("Product Image Server: ", server);
+        console.log("Product Image SRC: ", server + product.media.url);
     });
     return(/*#__PURE__*/ jsx_runtime_.jsx("div", {
         className: (BakeryDropListStyles_module_default()).dropItems,
