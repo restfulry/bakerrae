@@ -166,12 +166,10 @@ export const getServerSideProps = async () => {
   // console.log('PROCESS ENV', process.env);
 
   console.log('SERVER NEXT PUBLIC API', process.env.NEXT_PUBLIC_API);
-  console.log('USING SERVER: ', `${server}`);
+  console.log('USING SERVER: ', server);
 
   const res = await fetch(`${server}/bakerydrops`);
   const data = await res.json();
-
-  console.log("SERVER", server);
 
   if (!data) {
     return {

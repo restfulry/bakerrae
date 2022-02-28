@@ -18,6 +18,9 @@ const BakeryDropList = ({
   handleSubmit,
   disabled,
 }) => {
+
+console.log("BakeryDropList Server: ", server);
+
   return (
     <div className="container">
       <div className={BakeryDropListStyles.wrapper}>

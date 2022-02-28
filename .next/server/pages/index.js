@@ -154,6 +154,7 @@ var BakeryDropListStyles_module_default = /*#__PURE__*/__webpack_require__.n(Bak
 
 const BakeryDropItem = ({ nextDrop , cartQty , server , handleAddToCart , handleRemoveFromCart ,  })=>{
     const products = nextDrop.products;
+    console.log("BakeryDropItem Server: ", server);
     products.map((product)=>{
         console.log("BAKERYDROPITEM - Product Media Url: ", product.media.url);
         console.log("Product Image Server: ", server);
@@ -290,6 +291,7 @@ const CheckoutButton = ({ handleSubmit , disabled  })=>{
 
 
 const BakeryDropList = ({ nextDrop , cartQty , server , handleAddToCart , handleRemoveFromCart , shipping , shippingOptions , handleShipping , handleSubmit , disabled ,  })=>{
+    console.log("BakeryDropList Server: ", server);
     return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: "container",
         children: [
@@ -831,10 +833,9 @@ function Home({ data: data1  }) {
 const getServerSideProps = async ()=>{
     // console.log('PROCESS ENV', process.env);
     console.log('SERVER NEXT PUBLIC API', process.env.NEXT_PUBLIC_API);
-    console.log('USING SERVER: ', `${server}`);
+    console.log('USING SERVER: ', server);
     const res = await fetch(`${server}/bakerydrops`);
     const data = await res.json();
-    console.log("SERVER", server);
     if (!data) {
         return {
             notFound: true

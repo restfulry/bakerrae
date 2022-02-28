@@ -9,6 +9,7 @@ const BakeryDropItem = ({
   handleRemoveFromCart,
 }) => {
   const products = nextDrop.products;
+  console.log("BakeryDropItem Server: ", server);
 
 products.map((product)=> {
   console.log("BAKERYDROPITEM - Product Media Url: ", product.media.url)
