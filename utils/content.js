@@ -1,31 +1,28 @@
 export const faqData = [
   {
-    key: 1,
     question: "How do I get my hands on your products?",
     answer:
       "You can make an order using our website or you can send us a DM on our Instagram (@bakerraexcafe).",
   },
   {
-    key: 2,
     question: "When are your drop dates?",
     answer:
       "Our pre-orders open bi-weekly and until we sell out of our limited stock. We will always update our website and Instagram for the next drops and when you can start pre-ordering.",
   },
   {
-    key: 3,
     question: "Where and when do you deliver?",
     answer:
-      "We deliver every Sunday on the week of drops, starting from the morning until all orders have been delivered. We are currently delivering all around the GTA (Scarborough,  North York, Markham, Toronto, Etobicoke, Mississauga) with additional fees depending on location.",
+      "We deliver every Friday on the week of drops, starting from the morning until all orders have been delivered. We are currently delivering all around the GTA (Scarborough, North York, Markham, Toronto, Etobicoke, Mississauga) with additional fees depending on location.",
   },
   {
     question: "Can I pick-up my order?",
     answer:
-      "Yes, pickups are free of charge with no minimum purchase. Pickups will only be available from 9am-11am.",
+      "Yes, pickups are free of charge with no minimum purchase. Pickups will only be available from 10am-12pm on the day of the drop.",
   },
   {
     question: "Where are your pickup locations?",
     answer:
-      "We have pickup in Scarborough (near Eg GO) and Downtown Toronto (near Victoria & King E).",
+      "We have pickup in Scarborough (Eglinton and Bellamy) and Downtown Toronto at Dispatch Coffee (390 Bay St).",
   },
   {
     question: "How long do your cinnamon buns keep?",
@@ -45,7 +42,7 @@ export const faqData = [
   {
     question: "Do your cinnamon buns/donuts contain dairy or eggs?",
     answer:
-      "Our cinnamon buns and donuts both contain dairy but the buns are egg-free. Some fillings or toppings may be made with egg such as our kaya.Open to requests for dairy substitutions (plant-based milk, i.e. oat) to better accomodate you (*prices may differ).",
+      "Our cinnamon buns and donuts both contain dairy, but the buns are egg-free. Some fillings or toppings may be made with egg such as our kaya. Open to requests for dairy substitutions (plant-based milk, i.e. oat) to better accomodate you (*prices may differ).",
   },
   {
     question: "How many servings do each of your bottles make?",

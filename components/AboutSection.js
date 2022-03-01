@@ -8,7 +8,7 @@ const AboutSection = ({ sectionOne }) => {
       <div className={AboutSectionStyles.wrapper}>
         <div className={AboutSectionStyles.left}>
           <div className={AboutSectionStyles.image2}>
-            <Image src={"/rae.jpg"} width="403" height="347.5" />
+            <Image src={"/rae-nurse.jpg"} width="432" height="540" />
           </div>
           <div className={AboutSectionStyles.textWrapper}></div>
           <div className={AboutSectionStyles.text}>
@@ -34,7 +34,7 @@ const AboutSection = ({ sectionOne }) => {
             <p>{sectionOne.slug}</p>
           </div>
           <div className={AboutSectionStyles.image1}>
-            <Image src={"/rheastandmixer.jpg"} width="378" height="504" />
+            <Image src={"/rae-torch-min.JPG"} width="378" height="504" />
           </div>
         </div>
       </div>

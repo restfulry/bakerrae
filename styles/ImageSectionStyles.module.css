@@ -12,5 +12,7 @@
 @media screen and (max-width: 768px) {
   .imgWrapper {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
 }

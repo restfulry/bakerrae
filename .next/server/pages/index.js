@@ -87,7 +87,8 @@ module.exports = {
 	"infoleft": "InfoSectionStyles_infoleft__r5RX1",
 	"right": "InfoSectionStyles_right__eY5Vd",
 	"text": "InfoSectionStyles_text__X13wp",
-	"image1": "InfoSectionStyles_image1__unF97"
+	"image1": "InfoSectionStyles_image1__unF97",
+	"image2": "InfoSectionStyles_image2__ut3Xx"
 };
 
 
@@ -369,21 +370,24 @@ const DetailsSection = ({ nextDrop  })=>{
                         /*#__PURE__*/ jsx_runtime_.jsx("div", {
                             className: (DetailsSectionStyles_module_default()).textWrapper,
                             children: /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                children: "Bakerrae is an online bakery with popups in the GTA. Our baked goods are available exclusively online. We rotate our flavours as we become inspired."
+                                children: "Bakerrae is an online bakery based in Toronto. Our baked goods are available exclusively online. Our flavours rotate regularly, so check back often!"
                             })
                         }),
                         /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                             className: (DetailsSectionStyles_module_default()).textWrapper,
                             children: [
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                    children: "1. Place your pre-order online up to 48hrs before the next drop."
+                                    children: "1. Place your pre-order online before the Wednesday at 11:59pm before the next drop."
                                 }),
+                                /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                    children: "2. Select whether you would like pick-up (free) or delivery ($10 flat)*."
+                                    children: "2. Select whether you would like pick-up (free) or delivery ($10-15)*."
                                 }),
+                                /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
                                     children: "3. Keep your baked goods cool on the way home. To reheat, microwave for a few seconds, or bake at 350 for a few minutes."
                                 }),
+                                /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
                                     children: "We have limited space each drop. If it sells out, please follow our Instagram and sign up to our email list to hear when the next drop is."
                                 })
@@ -402,10 +406,10 @@ const DetailsSection = ({ nextDrop  })=>{
                             className: (DetailsSectionStyles_module_default()).textWrapper,
                             children: [
                                 /*#__PURE__*/ jsx_runtime_.jsx("h3", {
-                                    children: "Local Delivery"
+                                    children: "Local Delivery $10"
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                    children: "Downtown, North York, Scarborough, Etobicoke"
+                                    children: "Downtown Toronto, North York, Scarborough"
                                 })
                             ]
                         }),
@@ -413,10 +417,10 @@ const DetailsSection = ({ nextDrop  })=>{
                             className: (DetailsSectionStyles_module_default()).textWrapper,
                             children: [
                                 /*#__PURE__*/ jsx_runtime_.jsx("h3", {
-                                    children: "GTA Delivery"
+                                    children: "GTA Delivery $15"
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                    children: "Mississauga, Markham, Vaughan, Richmond Hill, Brampton"
+                                    children: "Mississauga, Markham, Etobicoke"
                                 })
                             ]
                         }),
@@ -427,10 +431,13 @@ const DetailsSection = ({ nextDrop  })=>{
                                     children: "Pickup Points"
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                    children: "Pickups are from 9am - 11am."
+                                    children: "Pickups are from 10am - noon on the day of the drop at:"
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                    children: "Pickups are available in Scarborough (Eg Go) and Downtown TO (Union)."
+                                    children: "1. Scarborough - Eglinton and Bellamy"
+                                }),
+                                /*#__PURE__*/ jsx_runtime_.jsx("h4", {
+                                    children: "2. Downtown Toronto - Dispatch Coffee"
                                 })
                             ]
                         })
@@ -461,7 +468,7 @@ const InfoSection = ()=>{
                         /*#__PURE__*/ jsx_runtime_.jsx("div", {
                             className: (InfoSectionStyles_module_default()).image2,
                             children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                                src: "/cinnamondonuts-min.JPG",
+                                src: "/cinnamonbuns-min.JPG",
                                 width: "333",
                                 height: "445"
                             })
@@ -496,7 +503,7 @@ const InfoSection = ()=>{
                         /*#__PURE__*/ jsx_runtime_.jsx("div", {
                             className: (InfoSectionStyles_module_default()).image1,
                             children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                                src: "/cinnamonbuns.JPG",
+                                src: "/trio-box-min.jpg",
                                 width: "300",
                                 height: "400"
                             })
@@ -633,7 +640,7 @@ const ImageSection = ()=>{
                 /*#__PURE__*/ jsx_runtime_.jsx("div", {
                     className: (ImageSectionStyles_module_default()).img,
                     children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                        src: "/product_halohalo.jpg",
+                        src: "/donut-vday-min-square.jpg",
                         width: "500",
                         height: "500"
                     })
@@ -641,7 +648,7 @@ const ImageSection = ()=>{
                 /*#__PURE__*/ jsx_runtime_.jsx("div", {
                     className: (ImageSectionStyles_module_default()).img,
                     children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                        src: "/raetorchsquare.jpg",
+                        src: "/rheastandmixer-square.JPG",
                         width: "500",
                         height: "500"
                     })
@@ -649,7 +656,7 @@ const ImageSection = ()=>{
                 /*#__PURE__*/ jsx_runtime_.jsx("div", {
                     className: (ImageSectionStyles_module_default()).img,
                     children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                        src: "/balikabayansquare.jpg",
+                        src: "/trio-topdown-min.jpg",
                         width: "500",
                         height: "500"
                     })
@@ -688,8 +695,8 @@ function Home({ data: data1  }) {
     const shippingOptions = [
         "Free Pickup (Scarborough)",
         "Free Pickup (Toronto)",
-        "Local Delivery ($8)",
-        "GTA Delivery ($10)", 
+        "Local Delivery ($10)",
+        "GTA Delivery ($15)", 
     ];
     const itemInCart1 = (product)=>{
         let itemInCart = cart.find((item)=>item.product.id === product.id

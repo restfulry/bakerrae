@@ -8,7 +8,7 @@ const InfoSection = () => {
       <div className={InfoSectionStyles.infowrapper}>
         <div className={InfoSectionStyles.infoleft}>
           <div className={InfoSectionStyles.image2}>
-            <Image src={"/cinnamondonuts-min.JPG"} width="333" height="445" />
+            <Image src={"/cinnamonbuns-min.JPG"} width="333" height="445" />
           </div>
           <div className={InfoSectionStyles.text}>
             <h1>A nurse with a passion.</h1>
@@ -25,7 +25,7 @@ const InfoSection = () => {
             <h3>Woman-run. Small-batch. Asian flavours.</h3>
           </div>
           <div className={InfoSectionStyles.image1}>
-            <Image src={"/cinnamonbuns.JPG"} width="300" height="400" />
+            <Image src={"/trio-box-min.jpg"} width="300" height="400" />
           </div>
         </div>
       </div>

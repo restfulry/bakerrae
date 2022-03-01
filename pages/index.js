@@ -23,8 +23,8 @@ export default function Home({ data }) {
   const shippingOptions = [
     "Free Pickup (Scarborough)",
     "Free Pickup (Toronto)",
-    "Local Delivery ($8)",
-    "GTA Delivery ($10)",
+    "Local Delivery ($10)",
+    "GTA Delivery ($15)",
   ];
 
   const itemInCart = (product) => {

@@ -34,6 +34,10 @@
     max-width: 0%;
   }
 
+  .image2 {
+    align-self: center;
+  }
+
   .text {
     padding-top: 30px;
     padding-bottom: 15px;

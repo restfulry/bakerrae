@@ -6,13 +6,13 @@ const ImageSection = () => {
     <div className="container">
       <div className={ImageSectionStyles.imgWrapper}>
         <div className={ImageSectionStyles.img}>
-          <Image src={"/product_halohalo.jpg"} width="500" height="500" />
+          <Image src={"/donut-vday-min-square.jpg"} width="500" height="500" />
         </div>
         <div className={ImageSectionStyles.img}>
-          <Image src={"/raetorchsquare.jpg"} width="500" height="500" />
+          <Image src={"/rheastandmixer-square.JPG"} width="500" height="500" />
         </div>
         <div className={ImageSectionStyles.img}>
-          <Image src={"/balikabayansquare.jpg"} width="500" height="500" />
+          <Image src={"/trio-topdown-min.jpg"} width="500" height="500" />
         </div>
       </div>
     </div>
