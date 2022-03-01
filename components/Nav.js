@@ -5,13 +5,13 @@ import navStyles from "../styles/Nav.module.css";
 const Nav = () => {
   return (
     <nav className={navStyles.nav}>
-      <ul>
-        <li>
           <div className={navStyles.logo}>
             <Link href="/">
               <Image src="/logo.png" width="70" height="70" alt="pic" />
             </Link>
           </div>
+      <ul>
+        <li>
         </li>
         <li>
           <Link href="/">ORDER</Link>

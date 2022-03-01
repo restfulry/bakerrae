@@ -34,7 +34,7 @@ const AboutSection = ({ sectionOne }) => {
               <h1>{sectionOne.header}</h1>
               <Image src={"/line.svg"} width="70" height="10" />
             </div>
-            <h3>{sectionOne.slug}</h3>
+            <p>{sectionOne.slug}</p>
           </div>
           <div className={AboutSectionStyles.image1}>
             <Image src={"/rheastandmixer.jpg"} width="378" height="504" />

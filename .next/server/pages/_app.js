@@ -54,53 +54,54 @@ var Nav_module_default = /*#__PURE__*/__webpack_require__.n(Nav_module);
 
 
 const Nav = ()=>{
-    return(/*#__PURE__*/ jsx_runtime_.jsx("nav", {
+    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("nav", {
         className: (Nav_module_default()).nav,
-        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {
-            children: [
-                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                    children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        className: (Nav_module_default()).logo,
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: (Nav_module_default()).logo,
+                children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                    href: "/",
+                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
+                        src: "/logo.png",
+                        width: "70",
+                        height: "70",
+                        alt: "pic"
+                    })
+                })
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx("li", {}),
+                    /*#__PURE__*/ jsx_runtime_.jsx("li", {
                         children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
                             href: "/",
-                            children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                                src: "/logo.png",
-                                width: "70",
-                                height: "70",
-                                alt: "pic"
+                            children: "ORDER"
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                            href: "/about",
+                            children: "ABOUT"
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                            href: "/faq",
+                            children: "FAQ"
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
+                            href: "https://www.instagram.com/bakerraexcafe/",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                target: "_blank",
+                                children: "INSTAGRAM"
                             })
                         })
                     })
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
-                        href: "/",
-                        children: "ORDER"
-                    })
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
-                        href: "/about",
-                        children: "ABOUT"
-                    })
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
-                        href: "/faq",
-                        children: "FAQ"
-                    })
-                }),
-                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
-                        href: "https://www.instagram.com/bakerraexcafe/",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                            target: "_blank",
-                            children: "INSTAGRAM"
-                        })
-                    })
-                })
-            ]
-        })
+                ]
+            })
+        ]
     }));
 };
 /* harmony default export */ const components_Nav = (Nav);

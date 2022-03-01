@@ -23,6 +23,8 @@
 @media screen and (max-width: 768px) {
   
   .infowrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-left: 30px;
     padding-right: 30px;
   }
