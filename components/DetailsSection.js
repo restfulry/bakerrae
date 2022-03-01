@@ -17,7 +17,7 @@ const DetailsSection = ({ nextDrop }) => {
           </div>
           <div className={DetailsSectionStyles.textWrapper}>
             <h4>
-              1. Place your pre-order online before the Wednesday at 11:59pm before the next drop.
+              1. Place your pre-order online by the Wednesday at 11:59pm before the next drop.
             </h4>
             <br></br>
             <h4>
@@ -53,7 +53,7 @@ const DetailsSection = ({ nextDrop }) => {
               1. Scarborough - Eglinton and Bellamy
             </h4>
             <h4>
-              2. Downtown Toronto - Dispatch Coffee
+              2. Downtown Toronto - Dispatch Coffee, 390 Bay St.
             </h4>
           </div>
         </div>

@@ -86,9 +86,9 @@ module.exports = {
 	"infowrapper": "InfoSectionStyles_infowrapper__N8v_6",
 	"infoleft": "InfoSectionStyles_infoleft__r5RX1",
 	"right": "InfoSectionStyles_right__eY5Vd",
-	"text": "InfoSectionStyles_text__X13wp",
 	"image1": "InfoSectionStyles_image1__unF97",
-	"image2": "InfoSectionStyles_image2__ut3Xx"
+	"image2": "InfoSectionStyles_image2__ut3Xx",
+	"text": "InfoSectionStyles_text__X13wp"
 };
 
 
@@ -377,7 +377,7 @@ const DetailsSection = ({ nextDrop  })=>{
                             className: (DetailsSectionStyles_module_default()).textWrapper,
                             children: [
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                    children: "1. Place your pre-order online before the Wednesday at 11:59pm before the next drop."
+                                    children: "1. Place your pre-order online by the Wednesday at 11:59pm before the next drop."
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
@@ -437,7 +437,7 @@ const DetailsSection = ({ nextDrop  })=>{
                                     children: "1. Scarborough - Eglinton and Bellamy"
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("h4", {
-                                    children: "2. Downtown Toronto - Dispatch Coffee"
+                                    children: "2. Downtown Toronto - Dispatch Coffee, 390 Bay St."
                                 })
                             ]
                         })
@@ -468,7 +468,7 @@ const InfoSection = ()=>{
                         /*#__PURE__*/ jsx_runtime_.jsx("div", {
                             className: (InfoSectionStyles_module_default()).image2,
                             children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                                src: "/cinnamonbuns-min.JPG",
+                                src: "/trio-box-min.jpg",
                                 width: "333",
                                 height: "445"
                             })
@@ -503,9 +503,9 @@ const InfoSection = ()=>{
                         /*#__PURE__*/ jsx_runtime_.jsx("div", {
                             className: (InfoSectionStyles_module_default()).image1,
                             children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                                src: "/trio-box-min.jpg",
-                                width: "300",
-                                height: "400"
+                                src: "/cinnamonbuns-min.JPG",
+                                width: "333",
+                                height: "445"
                             })
                         })
                     ]

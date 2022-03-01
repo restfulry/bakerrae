@@ -6,13 +6,31 @@
   max-width: 90%;
 }
 
-.infoleft,
-.right {
+.infoleft {
   display: flex;
   flex: 1;
+  align-items: flex-end;
   flex-direction: column;
   justify-content: space-around;
   padding: 25px;
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px;
+}
+
+.image1 {
+  padding-left: 10%;
+}
+
+.image2 {
+  padding-right: 12%;
+  padding-bottom: 5%;
 }
 
 .text {
@@ -35,7 +53,7 @@
   }
 
   .image2 {
-    align-self: center;
+    align-self: flex-end;
   }
 
   .text {
@@ -44,11 +62,13 @@
   }
 
   .right {
+    align-items: center;
     padding-top: 20px;
     padding-bottom: 0px;
   }
 
   .infoleft {
+    align-self: center;
     padding-top: 0px;
     padding-bottom: 20px;
   }
