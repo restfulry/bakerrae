@@ -468,7 +468,7 @@ const InfoSection = ()=>{
                         /*#__PURE__*/ jsx_runtime_.jsx("div", {
                             className: (InfoSectionStyles_module_default()).image2,
                             children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                                src: "/trio-box-min.jpg",
+                                src: "/ubepandanturon-min.JPG",
                                 width: "333",
                                 height: "445"
                             })
