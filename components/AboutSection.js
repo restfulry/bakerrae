@@ -12,9 +12,6 @@ const AboutSection = ({ sectionOne }) => {
           </div>
           <div className={AboutSectionStyles.textWrapper}></div>
           <div className={AboutSectionStyles.text}>
-            <p>{sectionOne.body}</p>
-          </div>
-          <div className={AboutSectionStyles.text}>
             <p>{sectionOne.body1}</p>
           </div>
           <div className={AboutSectionStyles.text}>

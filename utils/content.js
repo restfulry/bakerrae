@@ -1,15 +1,18 @@
 export const faqData = [
   {
+    key: 1,
     question: "How do I get my hands on your products?",
     answer:
       "You can make an order using our website or you can send us a DM on our Instagram (@bakerraexcafe).",
   },
   {
+    key: 2,
     question: "When are your drop dates?",
     answer:
       "Our pre-orders open bi-weekly and until we sell out of our limited stock. We will always update our website and Instagram for the next drops and when you can start pre-ordering.",
   },
   {
+    key: 3,
     question: "Where and when do you deliver?",
     answer:
       "We deliver every Sunday on the week of drops, starting from the morning until all orders have been delivered. We are currently delivering all around the GTA (Scarborough,  North York, Markham, Toronto, Etobicoke, Mississauga) with additional fees depending on location.",

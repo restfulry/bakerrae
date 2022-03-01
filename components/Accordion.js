@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import FaqStyles from "../styles/FaqStyles.module.css";
 
-const Accordion = ({ question, answer, idx }) => {
+const Accordion = ({ question, answer }) => {
   const [isActive, setIsActive] = useState(false);
 
   const handleIsActive = () => {
@@ -10,7 +10,7 @@ const Accordion = ({ question, answer, idx }) => {
   };
 
   return (
-    <div className={FaqStyles.accordionItem} key={idx}>
+    <div className={FaqStyles.accordionItem}>
       <div className={FaqStyles.accordionTitle} onClick={handleIsActive}>
         <div>
           <h3>{question}</h3>

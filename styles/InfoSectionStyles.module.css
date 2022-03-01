@@ -27,6 +27,7 @@
     padding-bottom: 0px;
     padding-left: 30px;
     padding-right: 30px;
+    flex-direction: column-reverse;
   }
   
   .image1 {
@@ -43,8 +44,8 @@
     padding-bottom: 0px;
   }
 
-
-  .infowrapper {
-    flex-direction: column-reverse;
-    }
+  .infoleft {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
 }

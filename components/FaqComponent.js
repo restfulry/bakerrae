@@ -7,13 +7,15 @@ const FaqComponent = ({ faqData }) => {
   return (
     <div className="container">
       <div className={FaqStyles.faqWrapper}>
-        <div className={FaqStyles.subHeader}>
+        <div className={FaqStyles.subHeader} key="subHeader">
           <h1>General FAQs</h1>
           <Image src={"/line.svg"} width="70" height="10" />
         </div>
         <div className={FaqStyles.faqAccordion} key="faqAccordion">
-          {faqData.map(({ question, answer, idx }) => (
-            <Accordion question={question} answer={answer} idx={idx} />
+          {faqData.map(({ question, answer}, idx) => (
+            <div key={idx}>
+              <Accordion question={question} answer={answer}/>
+            </div>
           ))}
         </div>
       </div>

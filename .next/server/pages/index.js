@@ -606,7 +606,7 @@ const HeroVideo = ()=>{
                             src: "https://www.youtube.com/embed/UtPprUWteeo",
                             title: "Baker Rae x Cafe",
                             frameBorder: "0",
-                            allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; modestbranding;",
+                            allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;",
                             allowFullScreen: true
                         })
                     })
