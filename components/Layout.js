@@ -8,9 +8,9 @@ export const Layout = ({ children }) => {
     <>
       <Meta />
       <Nav />
-      <div className={styles.container}>
+      {/* <div className={styles.container}> */}
         <main className={styles.main}>{children}</main>
-      </div>
+      {/* </div> */}
       {/* <Footer /> */}
     </>
   );

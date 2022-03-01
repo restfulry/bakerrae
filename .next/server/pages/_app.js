@@ -9,11 +9,7 @@ exports.modules = {
 
 // Exports
 module.exports = {
-	"container": "Layout_container__S4aNf",
-	"main": "Layout_main__c1pHS",
-	"footer": "Layout_footer__mj7GQ",
-	"title": "Layout_title__aN7Jd",
-	"description": "Layout_description__tvpUW"
+
 };
 
 
@@ -166,12 +162,9 @@ const Layout = ({ children  })=>{
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx(components_Meta, {}),
             /*#__PURE__*/ jsx_runtime_.jsx(components_Nav, {}),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: (Layout_module_default()).container,
-                children: /*#__PURE__*/ jsx_runtime_.jsx("main", {
-                    className: (Layout_module_default()).main,
-                    children: children
-                })
+            /*#__PURE__*/ jsx_runtime_.jsx("main", {
+                className: (Layout_module_default()).main,
+                children: children
             })
         ]
     }));

@@ -3,7 +3,7 @@
   justify-content: space-around;
   background-color: #ffd6b1;
   padding: 50px;
-  /* max-width: 1300px; */
+  max-width: 90%;
 }
 
 .infoleft,
@@ -18,4 +18,31 @@
 .text {
   margin: 0px;
   padding-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .infowrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .image1 {
+    max-width: 0%;
+  }
+
+  .text {
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+
+  .right {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+
+  .infowrapper {
+    flex-direction: column-reverse;
+    }
 }

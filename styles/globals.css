@@ -34,8 +34,8 @@ body {
 
 .container {
   z-index: 1;
-  width: 100%;
-  max-width: 1300px;
+  max-width: 100%;
+  /* max-width: 1300px; */
   margin-right: auto;
   margin-left: auto;
 }
@@ -110,7 +110,7 @@ button:disabled:hover {
   box-shadow: none;
 }
 
-/* @media screen and (max-width: 991px) {
+/* @media screen and (max-width: 768px) {
   .container {
     padding-right: 30px;
     padding-left: 30px;

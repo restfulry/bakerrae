@@ -86,7 +86,8 @@ module.exports = {
 	"infowrapper": "InfoSectionStyles_infowrapper__N8v_6",
 	"infoleft": "InfoSectionStyles_infoleft__r5RX1",
 	"right": "InfoSectionStyles_right__eY5Vd",
-	"text": "InfoSectionStyles_text__X13wp"
+	"text": "InfoSectionStyles_text__X13wp",
+	"image1": "InfoSectionStyles_image1__unF97"
 };
 
 
