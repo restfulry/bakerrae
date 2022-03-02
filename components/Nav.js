@@ -8,7 +8,9 @@ const Nav = () => {
     <nav className={navStyles.nav}>
           <div className={navStyles.logo}>
             <Link href="/">
-              <Image src="/logo.png" width="70" height="70" alt="pic" />
+              <a>
+                <Image src="/logo.png" width="70" height="70" alt="pic" />
+              </a>
             </Link>
           </div>
       <ul>

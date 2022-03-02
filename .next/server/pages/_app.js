@@ -61,11 +61,13 @@ const Nav = ()=>{
                 className: (Nav_module_default()).logo,
                 children: /*#__PURE__*/ jsx_runtime_.jsx(next_link["default"], {
                     href: "/",
-                    children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                        src: "/logo.png",
-                        width: "70",
-                        height: "70",
-                        alt: "pic"
+                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
+                            src: "/logo.png",
+                            width: "70",
+                            height: "70",
+                            alt: "pic"
+                        })
                     })
                 })
             }),

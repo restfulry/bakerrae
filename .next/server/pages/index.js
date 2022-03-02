@@ -59,8 +59,10 @@ module.exports = {
 // Exports
 module.exports = {
 	"heroVidWrapper": "HeroVideoStyles_heroVidWrapper__Plojb",
+	"content": "HeroVideoStyles_content__LnRYX",
 	"video": "HeroVideoStyles_video__lBLOu",
-	"header": "HeroVideoStyles_header__7ZnkB"
+	"header": "HeroVideoStyles_header__7ZnkB",
+	"imageWrapper": "HeroVideoStyles_imageWrapper__ng5EG"
 };
 
 
@@ -468,7 +470,7 @@ const InfoSection = ()=>{
                         /*#__PURE__*/ jsx_runtime_.jsx("div", {
                             className: (InfoSectionStyles_module_default()).image2,
                             children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
-                                src: "/ubepandanturon-min.JPG",
+                                src: "/ube-turon-pandan-min.jpg",
                                 width: "333",
                                 height: "445"
                             })
@@ -577,10 +579,13 @@ const Reviews = ()=>{
 };
 /* harmony default export */ const components_Reviews = (Reviews);
 
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
 // EXTERNAL MODULE: ./styles/HeroVideoStyles.module.css
 var HeroVideoStyles_module = __webpack_require__(8909);
 var HeroVideoStyles_module_default = /*#__PURE__*/__webpack_require__.n(HeroVideoStyles_module);
 ;// CONCATENATED MODULE: ./components/HeroVideo.js
+
 
 
 
@@ -594,7 +599,7 @@ const HeroVideo = ()=>{
                     className: (HeroVideoStyles_module_default()).header,
                     children: [
                         /*#__PURE__*/ jsx_runtime_.jsx("h1", {
-                            children: "As seen on BlogTO"
+                            children: "As seen on"
                         }),
                         /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
                             src: "/line.svg",
@@ -603,20 +608,64 @@ const HeroVideo = ()=>{
                         })
                     ]
                 }),
-                /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                    className: "sectionOrange",
-                    children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        className: (HeroVideoStyles_module_default()).video,
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("iframe", {
-                            width: "520",
-                            height: "520",
-                            src: "https://www.youtube.com/embed/UtPprUWteeo",
-                            title: "Baker Rae x Cafe",
-                            frameBorder: "0",
-                            allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;",
-                            allowFullScreen: true
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: (HeroVideoStyles_module_default()).content,
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: (HeroVideoStyles_module_default()).feature,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "sectionOrange",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                    className: (HeroVideoStyles_module_default()).video,
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx("iframe", {
+                                        width: "500",
+                                        height: "500",
+                                        src: "https://www.youtube.com/embed/UtPprUWteeo",
+                                        title: "Baker Rae x Cafe",
+                                        frameBorder: "0",
+                                        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;",
+                                        allowFullScreen: true
+                                    })
+                                })
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: (HeroVideoStyles_module_default()).feature,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "sectionOrange",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                    className: (HeroVideoStyles_module_default()).video,
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                        className: (HeroVideoStyles_module_default()).imageWrapper,
+                                        children: /*#__PURE__*/ jsx_runtime_.jsx(next_image["default"], {
+                                            src: "/torontolife-min-square.jpg",
+                                            width: "500",
+                                            height: "500",
+                                            alt: "pic"
+                                        })
+                                    })
+                                })
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: (HeroVideoStyles_module_default()).feature,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                className: "sectionOrange",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                                    className: (HeroVideoStyles_module_default()).video,
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx("iframe", {
+                                        width: "500",
+                                        height: "500",
+                                        src: "https://www.youtube.com/embed/AfFafa_9Bds",
+                                        title: "Baker Rae on Omni",
+                                        frameBorder: "0",
+                                        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;",
+                                        allowFullScreen: true
+                                    })
+                                })
+                            })
                         })
-                    })
+                    ]
                 })
             ]
         })

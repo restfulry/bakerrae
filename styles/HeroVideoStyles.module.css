@@ -6,6 +6,12 @@
   padding: 50px;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .video {
   display: flex;
   justify-content: center;
@@ -15,4 +21,39 @@
 
 .header {
   display: flex;
+}
+
+@media screen and (max-width: 1700px) {
+  .video > iframe, .imageWrapper {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .video > iframe, .imageWrapper {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .video > iframe, .imageWrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .video > iframe, .imageWrapper {
+    width: 500px;
+    height: 500px;
+  }
 }
