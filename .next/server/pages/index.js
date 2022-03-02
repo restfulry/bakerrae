@@ -73,8 +73,7 @@ module.exports = {
 
 // Exports
 module.exports = {
-	"imgWrapper": "ImageSectionStyles_imgWrapper__GS2Ji",
-	"img": "ImageSectionStyles_img__aGrd_"
+	"imgWrapper": "ImageSectionStyles_imgWrapper__GS2Ji"
 };
 
 
