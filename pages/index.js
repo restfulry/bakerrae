@@ -27,6 +27,18 @@ export default function Home({ data }) {
     "GTA Delivery ($15)",
   ];
 
+  const customer = {
+    name: "Test",
+    AddressCity: "Toronto",
+    AddressLine1: "1 Cannery lane",
+    AddressLine2: "",
+    AddressPostalCode: "",
+    AddressState: "Ontario",
+    email: "bob@gmail.com",
+    phone: "1234567890",
+
+  };
+
   const itemInCart = (product) => {
     let itemInCart = cart.find((item) => item.product.id === product.id);
     return itemInCart;
@@ -99,7 +111,7 @@ export default function Home({ data }) {
     e.preventDefault();
     console.log("going to checkout");
 
-    const data = JSON.stringify({ cart, shipping: shipping });
+    const data = JSON.stringify({ cart, shipping: shipping, customer });
     const res = await fetch(`${server}/orders/checkout`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
