@@ -18,6 +18,7 @@ export default function Home({ data }) {
 
   const [cart, setCart] = useState([]);
   const [shipping, setShipping] = useState("Free Pickup (Scarborough)");
+  const [customer, setCustomer] = useState(customerData);
   const [disabled, setDisabled] = useState(true);
 
   const shippingOptions = [
@@ -27,7 +28,7 @@ export default function Home({ data }) {
     "GTA Delivery ($15)",
   ];
 
-  const customer = {
+  const customerData = {
     name: "Test",
     AddressCity: "Toronto",
     AddressLine1: "1 Cannery lane",
@@ -107,11 +108,15 @@ export default function Home({ data }) {
     return setShipping(shippingOption);
   };
 
+  const handleCustomer = (customerData) => {
+    return setCustomer(customerData);
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("going to checkout");
 
-    const data = JSON.stringify({ cart, shipping: shipping, customer });
+    const data = JSON.stringify({ cart, shipping: shipping, customer: customer });
     const res = await fetch(`${server}/orders/checkout`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

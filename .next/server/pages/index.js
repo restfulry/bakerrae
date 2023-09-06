@@ -746,6 +746,16 @@ function Home({ data: data1  }) {
         "Local Delivery ($10)",
         "GTA Delivery ($15)", 
     ];
+    const customer = {
+        name: "Test",
+        AddressCity: "Toronto",
+        AddressLine1: "1 Cannery lane",
+        AddressLine2: "",
+        AddressPostalCode: "",
+        AddressState: "Ontario",
+        email: "bob@gmail.com",
+        phone: "1234567890"
+    };
     const itemInCart1 = (product)=>{
         let itemInCart = cart.find((item)=>item.product.id === product.id
         );
@@ -823,7 +833,8 @@ function Home({ data: data1  }) {
         console.log("going to checkout");
         const data = JSON.stringify({
             cart,
-            shipping: shipping
+            shipping: shipping,
+            customer
         });
         const res = await fetch(`${server}/orders/checkout`, {
             method: "POST",

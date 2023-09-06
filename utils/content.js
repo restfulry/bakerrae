@@ -12,17 +12,17 @@ export const faqData = [
   {
     question: "Where and when do you deliver?",
     answer:
-      "We deliver every Friday on the week of drops, starting from the morning until all orders have been delivered. We are currently delivering all around the GTA (Scarborough, North York, Markham, Toronto, Etobicoke, Mississauga) with additional fees depending on location.",
+      "We deliver every Saturday on the week of drops, starting from the morning until all orders have been delivered. We are currently delivering all around the GTA (Scarborough, North York, Markham, Toronto, Etobicoke, Mississauga) with additional fees depending on location.",
   },
   {
     question: "Can I pick-up my order?",
     answer:
-      "Yes, pickups are free of charge with no minimum purchase. Pickups will only be available from 10am-12pm on the day of the drop.",
+      "Yes, pickups are free of charge with no minimum purchase. Pickups are available during our bakery opening hours on the day of the drop. Please check Google Maps for up-to-date opening hours.",
   },
   {
-    question: "Where are your pickup locations?",
+    question: "Where is your pickup location?",
     answer:
-      "We have pickup in Scarborough (Eglinton and Bellamy) and Downtown Toronto at Dispatch Coffee (390 Bay St).",
+      "Pickup is at our bakery located at 149 Main St., M4E 2V9, TORONTO, ON.",
   },
   {
     question: "How long do your cinnamon buns keep?",
@@ -37,7 +37,7 @@ export const faqData = [
   {
     question: "Are your cinnamon buns nut-free?",
     answer:
-      "We currently do not use any nuts in our recipe, however our commercial kitchen may not be nut-free.",
+      "We currently do not use any nuts in our recipe, however our commercial kitchen is not be nut-free.",
   },
   {
     question: "Do your cinnamon buns/donuts contain dairy or eggs?",
