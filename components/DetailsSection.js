@@ -12,12 +12,12 @@ const DetailsSection = ({ nextDrop }) => {
         <div className={DetailsSectionStyles.reviews}>
           <div className={DetailsSectionStyles.textWrapper}>
             <h4>
-              Bakerrae is an online bakery based in Toronto. Our baked goods are available exclusively online. Our flavours rotate regularly, so check back often!
+              Bakerrae is a bakery based in Toronto. Our baked goods are available online, or limited walk-in at our bakery. Our flavours rotate regularly, so check back often!
             </h4>
           </div>
           <div className={DetailsSectionStyles.textWrapper}>
             <h4>
-              1. Place your pre-order online by the Wednesday at 11:59pm before the next drop.
+              1. Place your pre-order online by the Thursday at 11:59pm before the next drop.
             </h4>
             <br></br>
             <h4>
@@ -47,13 +47,10 @@ const DetailsSection = ({ nextDrop }) => {
             <h4>Mississauga, Markham, Etobicoke</h4>
           </div>
           <div className={DetailsSectionStyles.textWrapper}>
-            <h3>Pickup Points</h3>
-            <h4>Pickups are from 10am - noon on the day of the drop at:</h4>
+            <h3>Pickup Details</h3>
+            <h4>Pickups are during our bakery opening hours on the day of the drop at:</h4>
             <h4>
-              1. Scarborough - Eglinton and Bellamy
-            </h4>
-            <h4>
-              2. Downtown Toronto - Dispatch Coffee, 390 Bay St.
+              Bakerrae: 149 MAIN ST. TORONTO, ON, M4E 2V9
             </h4>
           </div>
         </div>
