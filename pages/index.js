@@ -22,8 +22,7 @@ export default function Home({ data }) {
   const [disabled, setDisabled] = useState(true);
 
   const shippingOptions = [
-    "Free Pickup (Scarborough)",
-    "Free Pickup (Toronto)",
+    "Free Bakery Pickup (149 Main St)",
     "Local Delivery ($10)",
     "GTA Delivery ($15)",
   ];

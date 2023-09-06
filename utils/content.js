@@ -1,5 +1,10 @@
 export const faqData = [
   {
+    question: "Where is the Bakerrae bakery located?",
+    answer:
+      "149 Main St., Toronto, ON, M4E 2V9 (Upper Beaches at Main St and Gerrard St E)",
+  },
+  {
     question: "How do I get my hands on your products?",
     answer:
       "You can make an order using our website or you can send us a DM on our Instagram (@bakerraexcafe).",
