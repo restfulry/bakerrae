@@ -23,11 +23,13 @@ const Nav = () => {
           <Link href="/about">ABOUT</Link>
         </li>
         <li>
-          <Link href="/faq">FAQ</Link>
-        </li>
-        <li>
           <Link href="https://www.instagram.com/bakerraexcafe/">
             <a target="_blank">INSTAGRAM</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="https://tinyurl.com/2p8e7e7f">
+            <a target="_blank">VISIT US!</a>
           </Link>
         </li>
       </ul>
