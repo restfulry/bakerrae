@@ -20,6 +20,7 @@ const BakeryDropList = ({
 }) => {
 
 console.log("BakeryDropList Server: ", server);
+if({nextDrop}) {
 
   return (
     <div className="container">
@@ -44,7 +45,21 @@ console.log("BakeryDropList Server: ", server);
       />
       <CheckoutButton handleSubmit={handleSubmit} disabled={disabled} />
     </div>
-  );
+  ); 
+} else {
+  return (
+    <div className="container">
+      <div className={BakeryDropListStyles.wrapper}>
+        <div className={BakeryDropListStyles.header}>
+          <h1>FOLLOW OUR INSTAGRAM FOR THE NEXT DROP</h1>
+          <h2>
+            <a target="_blank" href="https://www.instagram.com/bakerraexcafe/">@BAKERRAEXCAFE</a>  
+          </h2>
+        </div>
+      </div>
+    </div>
+  )
+}
 };
 
 export default BakeryDropList;
