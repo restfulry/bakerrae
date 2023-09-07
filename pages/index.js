@@ -16,17 +16,6 @@ import { faqData } from "../utils/content";
 export default function Home({ data }) {
   const router = useRouter();
 
-  const [cart, setCart] = useState([]);
-  const [shipping, setShipping] = useState("Free Pickup (Scarborough)");
-  const [customer, setCustomer] = useState(customerData);
-  const [disabled, setDisabled] = useState(true);
-
-  const shippingOptions = [
-    "Free Bakery Pickup (149 Main St)",
-    "Local Delivery ($10)",
-    "GTA Delivery ($15)",
-  ];
-
   const customerData = {
     name: "Test",
     AddressCity: "Toronto",
@@ -38,6 +27,19 @@ export default function Home({ data }) {
     phone: "1234567890",
 
   };
+
+  const [cart, setCart] = useState([]);
+  const [shipping, setShipping] = useState("Free Pickup (Scarborough)");
+  const [customer, setCustomer] = useState(customerData);
+  const [disabled, setDisabled] = useState(true);
+
+  const shippingOptions = [
+    "Free Bakery Pickup (149 Main St)",
+    "Local Delivery ($10)",
+    "GTA Delivery ($15)",
+  ];
+
+
 
   const itemInCart = (product) => {
     let itemInCart = cart.find((item) => item.product.id === product.id);
